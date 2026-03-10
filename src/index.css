@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+body {
+  margin: 0;
+}
+
+@keyframes arrow-nudge {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.cta-arrow {
+  display: inline-block;
+}
+
+.group:hover .cta-arrow {
+  animation: arrow-nudge 0.7s ease-in-out infinite;
+}
