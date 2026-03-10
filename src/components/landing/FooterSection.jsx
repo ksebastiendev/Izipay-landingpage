@@ -1,3 +1,5 @@
+import { useI18n } from '../../i18n/useI18n'
+
 const socialLinks = [
   { name: 'Facebook', icon: '/landing/icone%20/facebook.svg' },
   { name: 'Twitter', icon: '/landing/icone%20/tweeter.svg' },
@@ -7,17 +9,19 @@ const socialLinks = [
 ]
 
 export default function FooterSection() {
+  const { t } = useI18n()
+
   return (
     <footer className="bg-white py-8">
       <div className="mx-auto flex w-full max-w-[1120px] flex-col items-start justify-between gap-5 border-t border-slate-200 px-5 pt-8 text-[14px] text-slate-500 sm:flex-row sm:items-center">
         <div className="flex items-center text-teal-700">
-          <span className="text-[30px] font-extrabold">izichangePay</span>
+          <span className="text-[30px] font-extrabold">{t.footer.brand}</span>
         </div>
 
         <div className="flex items-center gap-8 text-[14px] font-medium text-slate-500">
-          <a href="#" className="transition hover:text-[#008080]">Documentation</a>
-          <a href="#" className="transition hover:text-[#008080]">Nos Produits</a>
-          <a href="#" className="transition hover:text-[#008080]">Politique de confidentialité</a>
+          <a href="#" className="transition hover:text-[#008080]">{t.footer.documentation}</a>
+          <a href="#" className="transition hover:text-[#008080]">{t.footer.products}</a>
+          <a href="#" className="transition hover:text-[#008080]">{t.footer.privacy}</a>
         </div>
 
         <div className="flex items-center gap-3">

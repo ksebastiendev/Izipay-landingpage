@@ -1,30 +1,16 @@
 import { useRef } from 'react'
+import { useI18n } from '../../i18n/useI18n'
 
-const cards = [
-  {
-    icon: '/landing/card-step1.png',
-    title: 'Instant Crypto Payments',
-    text: 'Accept payments in Bitcoin, Ethereum and other cryptocurrencies directly from your customers worldwide.',
-  },
-  {
-    icon: '/landing/cardstep2.svg.png',
-    title: 'Global Customers',
-    text: 'Allow customers from anywhere in the world to pay you easily using cryptocurrency without traditional banking limitations.',
-  },
-  {
-    icon: '/landing/cardstep3.svg.png',
-    title: 'Secure Transactions',
-    text: 'Every transaction is secured by blockchain technology and visible in real time through your merchant dashboard.',
-  },
-  {
-    icon: '/landing/card-step1.png',
-    title: 'Instant Crypto Payments',
-    text: 'Accept payments in Bitcoin, Ethereum and other cryptocurrencies directly from your customers worldwide.',
-  },
-]
+const cardIcons = ['/landing/card-step1.png', '/landing/cardstep2.svg.png', '/landing/cardstep3.svg.png', '/landing/card-step1.png']
 
 export default function WhyChooseSection() {
   const carouselRef = useRef(null)
+  const { t } = useI18n()
+
+  const cards = t.whyChoose.cards.map((card, index) => ({
+    ...card,
+    icon: cardIcons[index],
+  }))
 
   const scrollCards = (direction) => {
     const container = carouselRef.current
@@ -39,13 +25,13 @@ export default function WhyChooseSection() {
     <section className="bg-white py-20 lg:py-24">
       <div className="mx-auto w-full max-w-[1120px] px-5">
         <div className="flex items-center justify-between gap-4">
-          <h2 className="text-[48px] font-extrabold tracking-[-0.02em] text-slate-900">Why Chose IzichangePay ?</h2>
+          <h2 className="text-[48px] font-extrabold tracking-[-0.02em] text-slate-900">{t.whyChoose.title}</h2>
           <div className="flex items-center gap-2">
-            <button type="button" aria-label="Previous" className="shrink-0" onClick={() => scrollCards(-1)}>
-              <img src="/landing/Button.svg" alt="Previous" className="h-11 w-11" />
+            <button type="button" aria-label={t.whyChoose.previous} className="shrink-0" onClick={() => scrollCards(-1)}>
+              <img src="/landing/Button.svg" alt={t.whyChoose.previous} className="h-11 w-11" />
             </button>
-            <button type="button" aria-label="Next" className="shrink-0" onClick={() => scrollCards(1)}>
-              <img src="/landing/Button-1.svg" alt="Next" className="h-11 w-11" />
+            <button type="button" aria-label={t.whyChoose.next} className="shrink-0" onClick={() => scrollCards(1)}>
+              <img src="/landing/Button-1.svg" alt={t.whyChoose.next} className="h-11 w-11" />
             </button>
           </div>
         </div>

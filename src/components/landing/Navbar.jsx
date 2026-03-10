@@ -1,8 +1,9 @@
 import { useState } from 'react'
+import { useI18n } from '../../i18n/useI18n'
 
 export default function Navbar() {
-  const [language, setLanguage] = useState('EN')
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const { language, setLanguage, t } = useI18n()
   const languageFlag = language === 'FR' ? '/landing/fr-contry-flag.png' : '/landing/country-flag.png'
 
   return (
@@ -14,20 +15,20 @@ export default function Navbar() {
 
         <nav className="hidden items-center gap-10 lg:flex">
           <a href="#" className="text-[19px] font-semibold leading-none text-slate-500 transition hover:text-slate-700">
-            Nos produits
+            {t.nav.products}
           </a>
           <a href="#" className="text-[19px] font-semibold leading-none text-slate-500 transition hover:text-slate-700">
-            Documentations
+            {t.nav.docs}
           </a>
           <a href="#" className="text-[19px] font-semibold leading-none text-slate-500 transition hover:text-slate-700">
-            FAQ
+            {t.nav.faq}
           </a>
         </nav>
 
         <div className="flex min-w-0 items-center gap-2 sm:gap-3">
           <button
             type="button"
-            aria-label="Ouvrir le menu"
+            aria-label={t.nav.openMenu}
             aria-expanded={isMobileMenuOpen}
             onClick={() => setIsMobileMenuOpen((open) => !open)}
             className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-slate-300 text-slate-700 lg:hidden"
@@ -46,13 +47,13 @@ export default function Navbar() {
             href="#"
             className="hidden h-11 items-center rounded-xl border border-slate-300 bg-white px-7 text-[17px] font-semibold leading-none text-slate-900 transition hover:border-slate-400 hover:bg-slate-50 md:inline-flex"
           >
-            Connexion
+            {t.nav.login}
           </a>
           <a
             href="#"
             className="hidden h-10 items-center whitespace-nowrap rounded-xl bg-[#008080] px-4 text-[15px] font-semibold leading-none text-white transition hover:bg-[#007373] sm:inline-flex sm:h-11 sm:px-7 sm:text-[17px]"
           >
-            Inscription
+            {t.nav.signup}
           </a>
 
           <div className="ml-0 hidden items-center gap-1.5 sm:ml-1 sm:inline-flex sm:gap-2">
@@ -60,6 +61,7 @@ export default function Navbar() {
             <select
               value={language}
               onChange={(event) => setLanguage(event.target.value)}
+              aria-label={t.nav.language}
               className="w-11 appearance-none bg-transparent pr-3 text-[14px] font-semibold leading-none text-slate-900 outline-none sm:w-auto sm:pr-4 sm:text-[17px]"
             >
               <option value="FR">FR</option>
@@ -74,17 +76,29 @@ export default function Navbar() {
         <div className="border-t border-slate-200 bg-white lg:hidden">
           <nav className="mx-auto flex w-full max-w-[1120px] flex-col px-4 py-3">
             <a href="#" className="rounded-lg px-2 py-2 text-[16px] font-semibold text-slate-700 hover:bg-slate-50">
-              Nos produits
+              {t.nav.products}
             </a>
             <a href="#" className="rounded-lg px-2 py-2 text-[16px] font-semibold text-slate-700 hover:bg-slate-50">
-              Documentations
+              {t.nav.docs}
             </a>
             <a href="#" className="rounded-lg px-2 py-2 text-[16px] font-semibold text-slate-700 hover:bg-slate-50">
-              FAQ
+              {t.nav.faq}
             </a>
             <a href="#" className="mt-2 inline-flex h-10 items-center rounded-xl border border-slate-300 px-4 text-[15px] font-semibold text-slate-900">
-              Connexion
+              {t.nav.login}
             </a>
+            <div className="mt-3 inline-flex items-center gap-2 px-2">
+              <img src={languageFlag} alt={`Drapeau ${language}`} className="h-4 w-6 rounded-[2px] object-cover" />
+              <select
+                value={language}
+                onChange={(event) => setLanguage(event.target.value)}
+                aria-label={t.nav.language}
+                className="appearance-none bg-transparent pr-2 text-[14px] font-semibold text-slate-900 outline-none"
+              >
+                <option value="FR">FR</option>
+                <option value="EN">EN</option>
+              </select>
+            </div>
           </nav>
         </div>
       )}
