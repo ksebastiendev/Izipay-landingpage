@@ -1,6 +1,6 @@
 export default function DashboardSection() {
   return (
-    <section className="mt-6 bg-[#eff1f8] py-20">
+    <section className="bg-[#eff1f8] py-20 lg:py-24">
       <div className="mx-auto w-full max-w-[1120px] px-5 text-center">
         <h3 className="text-[56px] font-extrabold leading-[1.05] tracking-[-0.03em] text-slate-900">
           A Powerful Dashboard to Manage Your Payments

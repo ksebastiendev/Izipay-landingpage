@@ -1,7 +1,7 @@
 export default function HeroSection() {
   return (
     <section className="bg-[#f6f7fb]">
-      <div className="mx-auto grid w-full max-w-[1120px] items-center gap-8 px-5 py-12 lg:grid-cols-[1fr_1.05fr] lg:py-14">
+      <div className="mx-auto grid w-full max-w-[1120px] items-center gap-8 px-5 py-20 lg:grid-cols-[1fr_1.05fr] lg:py-24">
         <div>
           <h1 className="max-w-[530px] text-[42px] font-bold leading-[1.08] tracking-[-0.02em] text-slate-900">
             Accept Crypto Payments. Receive Your Money in Local Currency.

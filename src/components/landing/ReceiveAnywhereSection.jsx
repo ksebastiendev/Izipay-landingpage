@@ -1,11 +1,11 @@
 export default function ReceiveAnywhereSection() {
   return (
-    <section className="bg-white pb-12">
+    <section className="bg-white py-20 lg:py-24">
       <div className="mx-auto w-full max-w-[1120px] px-5">
         <div className="relative overflow-hidden rounded-2xl">
-          <img src="/landing/section-cryptopayement.png" alt="Receive crypto anywhere" className="w-full" />
-          <div className="absolute left-[9%] top-[50%] max-w-[360px] -translate-y-1/2">
-            <h3 className="text-[56px] font-bold leading-[1.05] tracking-[-0.03em] text-white">
+          <img src="/landing/section-cryptopayement.png" alt="Receive crypto anywhere" className="min-h-[220px] w-full object-cover" />
+          <div className="absolute left-4 top-1/2 max-w-[165px] -translate-y-1/2 sm:left-[7%] sm:max-w-[240px] md:left-[9%] md:max-w-[360px]">
+            <h3 className="text-[18px] font-bold leading-[1.08] tracking-[-0.02em] text-white sm:text-[36px] sm:leading-[1.04] sm:tracking-[-0.03em] md:text-[56px] md:leading-[1.05]">
               Receive Crypto Payments From Anywhere
             </h3>
           </div>

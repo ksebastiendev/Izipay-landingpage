@@ -1,6 +1,6 @@
 export default function SimpleWaySection() {
   return (
-    <section className="bg-white py-14">
+    <section className="bg-white py-20 lg:py-24">
       <div className="mx-auto grid w-full max-w-[1120px] items-center gap-10 px-5 lg:grid-cols-[1fr_1fr]">
         <img src="/landing/A-simplewayto.png" alt="Simple way to accept crypto" className="w-full max-w-[480px]" />
         <div>

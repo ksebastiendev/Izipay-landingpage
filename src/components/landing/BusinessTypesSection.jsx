@@ -1,6 +1,6 @@
 export default function BusinessTypesSection() {
   return (
-    <section className="bg-white py-10">
+    <section className="bg-white py-20 lg:py-24">
       <div className="mx-auto grid w-full max-w-[1120px] gap-12 px-5 lg:grid-cols-[0.9fr_1fr] lg:items-center">
         <div>
           <h3 className="max-w-[460px] text-[56px] font-extrabold leading-[1.05] tracking-[-0.03em] text-slate-900">

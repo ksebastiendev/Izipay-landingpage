@@ -1,16 +1,50 @@
-# React + Vite
+# IziPay Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Landing page React + Vite + Tailwind.
 
-Currently, two official plugins are available:
+## Pré-requis
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Node.js 20+
+- npm 10+
 
-## React Compiler
+## Développement local
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm install
+npm run dev
+```
 
-## Expanding the ESLint configuration
+## Vérification avant production
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm run lint
+npm run build
+```
+
+## Déploiement sur Vercel
+
+Le projet est prêt pour Vercel avec le fichier [vercel.json](vercel.json).
+
+### Option A — via Dashboard Vercel
+
+1. Push le projet sur GitHub/GitLab/Bitbucket.
+2. Sur Vercel: **Add New Project**.
+3. Sélectionne le repo.
+4. Vérifie les settings:
+	- Framework Preset: `Vite`
+	- Build Command: `npm run build`
+	- Output Directory: `dist`
+5. Clique **Deploy**.
+
+### Option B — via CLI Vercel
+
+```bash
+npm i -g vercel
+vercel
+vercel --prod
+```
+
+## Notes
+
+- Les routes sont redirigées vers `index.html` (SPA rewrite).
+- `dist/` et `node_modules/` sont ignorés par git.
