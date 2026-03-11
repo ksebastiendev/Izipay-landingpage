@@ -13,7 +13,7 @@ export default function FooterSection() {
 
   return (
     <footer className="bg-white py-8">
-      <div className="mx-auto flex w-full max-w-[1120px] flex-col items-start justify-between gap-5 border-t border-slate-200 px-5 pt-8 text-[14px] text-slate-500 sm:flex-row sm:items-center">
+      <div className="mx-auto flex w-full max-w-[1120px] flex-col items-start justify-between gap-5 border-t border-slate-200 px-4 pt-8 text-[14px] text-slate-500 sm:flex-row sm:items-center md:px-5">
         <div className="flex items-center text-teal-700">
           <span className="text-[30px] font-extrabold">{t.footer.brand}</span>
         </div>

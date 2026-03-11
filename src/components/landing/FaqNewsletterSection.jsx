@@ -32,10 +32,10 @@ export default function FaqNewsletterSection() {
 
   return (
     <section className="bg-white py-20 lg:py-24">
-      <div className="mx-auto grid w-full max-w-[1120px] gap-12 px-5 lg:grid-cols-2">
+      <div className="mx-auto grid w-full max-w-[1120px] gap-12 px-4 md:px-5 lg:grid-cols-2">
         <div>
           <h3 className="text-[52px] font-extrabold leading-[1.05] tracking-[-0.03em] text-slate-900">{t.faqNewsletter.title}</h3>
-          <p className="mt-2 max-w-[460px] text-[15px] text-slate-600">
+          <p className="mt-2 max-w-[460px] text-[16px] text-slate-600">
             {t.faqNewsletter.description}
           </p>
           <div className="mt-7 flex max-w-[420px] items-center gap-3">
@@ -63,7 +63,7 @@ export default function FaqNewsletterSection() {
                     {isOpen ? <FiMinus size={14} /> : <FiPlus size={14} />}
                   </span>
                 </button>
-                {isOpen && <p className="pb-3 pr-8 text-[14px] leading-6 text-slate-600">{faq.answer}</p>}
+                {isOpen && <p className="pb-3 pr-8 text-[15px] leading-6 text-slate-600">{faq.answer}</p>}
               </div>
             )
           })}
