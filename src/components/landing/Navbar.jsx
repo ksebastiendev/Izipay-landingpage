@@ -8,19 +8,19 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 bg-[#f6f7fb]/90 backdrop-blur-md supports-[backdrop-filter]:bg-[#f6f7fb]/80">
-      <div className="mx-auto flex min-h-[64px] w-full max-w-[1120px] items-center justify-between gap-2 px-4 py-2 sm:h-[76px] sm:px-5 sm:py-0">
+      <div className="mx-auto flex min-h-[58px] w-full max-w-[1120px] items-center justify-between gap-2 px-4 py-2 sm:h-[64px] sm:px-5 sm:py-0">
         <a href="#" className="shrink-0">
-          <img src="/landing/izipaylogo.png" alt="IzichangePay" className="h-[34px] w-auto max-w-[150px] object-contain sm:h-[42px] sm:max-w-none" />
+          <img src="/landing/izipaylogo.png" alt="IzichangePay" className="h-[28px] w-auto max-w-[132px] object-contain sm:h-[34px] sm:max-w-none" />
         </a>
 
-        <nav className="hidden items-center gap-10 lg:flex">
-          <a href="#" className="text-[19px] font-semibold leading-none text-slate-500 transition hover:text-slate-700">
+        <nav className="hidden items-center gap-8 lg:flex">
+          <a href="#" className="text-[15px] font-semibold leading-none text-slate-500 transition hover:text-[#008080]">
             {t.nav.products}
           </a>
-          <a href="#" className="text-[19px] font-semibold leading-none text-slate-500 transition hover:text-slate-700">
+          <a href="#" className="text-[15px] font-semibold leading-none text-slate-500 transition hover:text-[#008080]">
             {t.nav.docs}
           </a>
-          <a href="#" className="text-[19px] font-semibold leading-none text-slate-500 transition hover:text-slate-700">
+          <a href="#" className="text-[15px] font-semibold leading-none text-slate-500 transition hover:text-[#008080]">
             {t.nav.faq}
           </a>
         </nav>
@@ -31,7 +31,7 @@ export default function Navbar() {
             aria-label={t.nav.openMenu}
             aria-expanded={isMobileMenuOpen}
             onClick={() => setIsMobileMenuOpen((open) => !open)}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-slate-300 text-slate-700 lg:hidden"
+            className="inline-flex h-9 w-9 items-center justify-center rounded-xl border border-slate-300 text-slate-700 lg:hidden"
           >
             <span className="relative h-4 w-5">
               <span
@@ -45,29 +45,29 @@ export default function Navbar() {
           </button>
           <a
             href="#"
-            className="hidden h-11 items-center rounded-xl border border-slate-300 bg-white px-7 text-[17px] font-semibold leading-none text-slate-900 transition hover:border-slate-400 hover:bg-slate-50 md:inline-flex"
+            className="hidden h-9 items-center rounded-xl border border-slate-300 bg-white px-5 text-[14px] font-semibold leading-none text-slate-900 transition hover:border-[#008080]/40 hover:bg-slate-50 md:inline-flex"
           >
             {t.nav.login}
           </a>
           <a
             href="#"
-            className="hidden h-10 items-center whitespace-nowrap rounded-xl bg-[#008080] px-4 text-[15px] font-semibold leading-none text-white transition hover:bg-[#007373] sm:inline-flex sm:h-11 sm:px-7 sm:text-[17px]"
+            className="hidden h-9 items-center whitespace-nowrap rounded-xl bg-[#008080] px-4 text-[14px] font-semibold leading-none text-white transition hover:bg-[#007373] sm:inline-flex sm:px-5"
           >
             {t.nav.signup}
           </a>
 
-          <div className="ml-0 hidden items-center gap-1.5 sm:ml-1 sm:inline-flex sm:gap-2">
-            <img src={languageFlag} alt={`Drapeau ${language}`} className="h-4 w-6 rounded-[2px] object-cover sm:h-[18px] sm:w-[26px]" />
+          <div className="ml-0 hidden items-center gap-1.5 sm:ml-1 sm:inline-flex sm:gap-1.5">
+            <img src={languageFlag} alt={`Drapeau ${language}`} className="h-[14px] w-5 rounded-[2px] object-cover sm:h-4 sm:w-6" />
             <select
               value={language}
               onChange={(event) => setLanguage(event.target.value)}
               aria-label={t.nav.language}
-              className="w-11 appearance-none bg-transparent pr-3 text-[14px] font-semibold leading-none text-slate-900 outline-none sm:w-auto sm:pr-4 sm:text-[17px]"
+              className="w-10 appearance-none bg-transparent pr-3 text-[13px] font-semibold leading-none text-slate-900 outline-none sm:w-auto sm:pr-3 sm:text-[14px]"
             >
               <option value="FR">FR</option>
               <option value="EN">EN</option>
             </select>
-            <span className="pointer-events-none -ml-2 text-[11px] text-slate-600 sm:-ml-3 sm:text-[12px]">▾</span>
+            <span className="pointer-events-none -ml-2 text-[10px] text-slate-600 sm:-ml-2">▾</span>
           </div>
         </div>
       </div>

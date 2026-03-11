@@ -5,7 +5,7 @@ export default function HeroSection() {
 
   return (
     <section className="bg-[#f6f7fb]">
-      <div className="mx-auto grid w-full max-w-[1120px] items-center gap-8 px-5 py-20 lg:grid-cols-[1fr_1.05fr] lg:py-24">
+      <div className="mx-auto grid w-full max-w-[1120px] items-end gap-8 px-5 pt-16 pb-[20px] lg:grid-cols-[1fr_1.05fr] lg:pt-20">
         <div>
           <h1 className="max-w-[530px] text-[42px] font-bold leading-[1.08] tracking-[-0.02em] text-slate-900">{t.hero.title}</h1>
           <p className="mt-5 max-w-[500px] text-[15px] leading-7 text-slate-600">

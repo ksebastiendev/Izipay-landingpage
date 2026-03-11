@@ -44,7 +44,7 @@ export default function WhyChooseSection() {
               <article
                 key={`${card.title}-${index}`}
                 data-card
-                className="min-w-[280px] flex-1 rounded-xl bg-[#f7f8fb] p-7 md:min-w-[calc((100%-2rem)/3)]"
+                className="min-w-[280px] flex-1 rounded-xl bg-[#f7f8fb] p-7 transition-transform duration-300 hover:-translate-y-1 md:min-w-[calc((100%-2rem)/3)]"
               >
               <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[#008080]">
                 <img src={card.icon} alt="icon" className="h-7 w-7 object-contain" />

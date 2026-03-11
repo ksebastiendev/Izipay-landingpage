@@ -12,7 +12,7 @@ export default function TrustBanner() {
         </div>
 
         <div className="flex items-center justify-center">
-          <p className="text-center text-[12px] font-bold leading-tight text-white sm:text-[20px] sm:leading-none lg:text-[44px]">
+          <p className="text-center text-[12px] font-bold leading-tight text-white sm:text-[18px] sm:leading-none lg:text-[22px] xl:text-[26px] whitespace-nowrap">
             {t.trustBanner.text}
           </p>
         </div>
