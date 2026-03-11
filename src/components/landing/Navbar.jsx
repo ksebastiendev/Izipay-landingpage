@@ -8,7 +8,7 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 bg-[#f6f7fb]/90 backdrop-blur-md supports-[backdrop-filter]:bg-[#f6f7fb]/80">
-      <div className="mx-auto flex min-h-[58px] w-full max-w-[1120px] items-center justify-between gap-2 px-4 py-2 sm:h-[64px] sm:py-0 md:px-5">
+      <div className="mx-auto flex min-h-[58px] w-full max-w-[1280px] items-center justify-between gap-2 px-4 py-2 sm:h-[64px] sm:py-0 md:px-5">
         <a href="#" className="shrink-0">
           <img src="/landing/izipaylogo.png" alt="IzichangePay" className="h-[28px] w-auto max-w-[132px] object-contain sm:h-[34px] sm:max-w-none" />
         </a>
@@ -45,13 +45,13 @@ export default function Navbar() {
           </button>
           <a
             href="#"
-            className="hidden h-9 items-center rounded-xl border border-slate-300 bg-white px-5 text-[14px] font-semibold leading-none text-slate-900 transition hover:border-[#008080]/40 hover:bg-slate-50 md:inline-flex"
+            className="hidden h-9 items-center rounded-xl border border-slate-300 bg-white px-5 text-[14px] font-semibold leading-none text-slate-900 transition hover:border-[#008080]/40 hover:bg-slate-50 lg:inline-flex"
           >
             {t.nav.login}
           </a>
           <a
             href="#"
-            className="hidden h-9 items-center whitespace-nowrap rounded-xl bg-[#008080] px-4 text-[14px] font-semibold leading-none text-white transition hover:bg-[#007373] sm:inline-flex sm:px-5"
+            className="hidden h-9 items-center whitespace-nowrap rounded-xl bg-[#008080] px-4 text-[14px] font-semibold leading-none text-white transition hover:bg-[#007373] lg:inline-flex lg:px-5"
           >
             {t.nav.signup}
           </a>
@@ -74,7 +74,7 @@ export default function Navbar() {
 
       {isMobileMenuOpen && (
         <div className="border-t border-slate-200 bg-white lg:hidden">
-          <nav className="mx-auto flex w-full max-w-[1120px] flex-col px-4 md:px-5 py-3">
+          <nav className="mx-auto flex w-full max-w-[1280px] flex-col px-4 py-3 md:px-5">
             <a href="#" className="rounded-lg px-2 py-2 text-[16px] font-semibold text-slate-700 hover:bg-slate-50">
               {t.nav.products}
             </a>

@@ -18,11 +18,13 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
   margin: 0;
   font-family: "Typold", sans-serif;
+  overflow-x: clip;
 }
 
 [data-reveal] {
