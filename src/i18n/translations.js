@@ -11,6 +11,7 @@ export const translations = {
     },
     hero: {
       title: 'Acceptez les paiements crypto. Recevez votre argent en devise locale.',
+      titleLines: ['Acceptez les paiements crypto.', 'Recevez votre argent en devise', 'locale.'],
       description:
         'IzichangePay permet aux entreprises d’accepter des paiements en cryptomonnaies depuis le monde entier tout en les convertissant automatiquement dans la devise de leur choix.',
       emailPlaceholder: 'Adresse email',
@@ -151,6 +152,7 @@ export const translations = {
     },
     hero: {
       title: 'Accept Crypto Payments. Receive Your Money in Local Currency.',
+      titleLines: ['Accept Crypto Payments.', 'Receive Your Money in', 'Local Currency.'],
       description:
         'IzichangePay enables businesses to accept cryptocurrency payments from anywhere in the world while automatically converting them into the currency of their choice.',
       emailPlaceholder: 'Email Address',
