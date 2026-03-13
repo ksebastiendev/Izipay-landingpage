@@ -49,8 +49,8 @@ export default function WhyChooseSection() {
               <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[#008080]">
                 <img src={card.icon} alt="icon" className="h-7 w-7 object-contain" />
               </div>
-              <h3 className="mt-6 text-[22px] font-bold text-slate-900">{card.title}</h3>
-              <p className="mt-3 text-[14px] leading-6 text-slate-600">{card.text}</p>
+              <h3 className="mt-6 text-[24px] font-bold text-slate-900">{card.title}</h3>
+              <p className="mt-3 text-[14px] leading-6 text-slate-600 lg:text-[16px]">{card.text}</p>
               </article>
             ))}
           </div>

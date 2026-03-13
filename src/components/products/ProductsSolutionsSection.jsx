@@ -13,18 +13,33 @@ export default function ProductsSolutionsSection() {
 
           return (
             <div key={`${block.title}-${index}`} className={`grid items-center gap-7 md:gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-12 xl:gap-16 ${reverse ? 'lg:[&>*:first-child]:order-2' : ''}`}>
-              <div>
+              <div className="w-full max-w-[520px] justify-self-start">
                 <h2 className="text-[34px] font-bold leading-[1.1] tracking-[-0.02em] text-slate-900">{block.title}</h2>
-                <p className="mt-4 max-w-[500px] text-[16px] leading-[1.6] text-slate-600">{block.description}</p>
-                {block.points.length > 0 && (
-                  <ul className="mt-4 space-y-2 text-[16px] leading-[1.6] text-slate-600">
+                {block.points.length > 0 ? (
+                  <ul className="mt-4 list-none space-y-2 pl-0 text-[16px] leading-[1.6] text-slate-600">
+                    <li className="flex items-start gap-2">
+                      <img
+                        src="/landing/icone%20/valid.svg"
+                        alt=""
+                        aria-hidden="true"
+                        className="mt-1 h-5 w-5 shrink-0"
+                      />
+                      <span>{block.description}</span>
+                    </li>
                     {block.points.map((point) => (
                       <li key={point} className="flex items-start gap-2">
-                        <span className="mt-2 inline-block h-2 w-2 rounded-full bg-[#19c37d]" />
+                        <img
+                          src="/landing/icone%20/valid.svg"
+                          alt=""
+                          aria-hidden="true"
+                          className="mt-1 h-5 w-5 shrink-0"
+                        />
                         <span>{point}</span>
                       </li>
                     ))}
                   </ul>
+                ) : (
+                  <p className="mt-4 max-w-[500px] text-[16px] leading-[1.6] text-slate-600">{block.description}</p>
                 )}
                 <a
                   href="#"
@@ -34,8 +49,8 @@ export default function ProductsSolutionsSection() {
                 </a>
               </div>
 
-              <div className="flex justify-center lg:justify-end">
-                <img src={blockImage} alt={block.imageAlt} className="w-full max-w-[460px] rounded-2xl object-cover" />
+              <div className="flex w-full justify-center">
+                <img src={blockImage} alt={block.imageAlt} className="w-full max-w-[520px] rounded-2xl object-cover" />
               </div>
             </div>
           )

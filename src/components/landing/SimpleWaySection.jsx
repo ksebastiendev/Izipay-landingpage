@@ -9,7 +9,7 @@ export default function SimpleWaySection() {
         <img src="/landing/A-simplewayto.png" alt={t.simpleWay.imageAlt} className="w-full max-w-[480px]" />
         <div>
           <h3 className="max-w-[470px] text-[56px] font-extrabold leading-[1.03] tracking-[-0.03em] text-slate-900">{t.simpleWay.title}</h3>
-          <p className="mt-4 max-w-[480px] text-[16px] leading-7 text-slate-600">
+          <p className="mt-4 max-w-[480px] text-[16px] leading-7 text-slate-600 lg:text-[18px]">
             {t.simpleWay.description}
           </p>
           <a

@@ -31,7 +31,7 @@ export default function HeroSection() {
               )
             })}
           </h1>
-          <p className="mt-6 max-w-[560px] text-[18px] leading-[1.55] text-slate-600 lg:text-[19px]">
+          <p className="mt-6 max-w-[560px] text-[18px] leading-[1.55] text-slate-600 lg:text-[21px]">
             {t.hero.description}
           </p>
           <div className="mt-9 flex max-w-[392px] items-center gap-3">

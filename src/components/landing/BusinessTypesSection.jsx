@@ -11,15 +11,15 @@ export default function BusinessTypesSection() {
           <div className="mt-8 space-y-6">
             <div>
               <h4 className="text-[24px] font-bold text-slate-900">{t.businessTypes.items[0].title}</h4>
-              <p className="mt-2 text-[15px] text-slate-600">{t.businessTypes.items[0].text}</p>
+              <p className="mt-2 text-[15px] text-slate-600 lg:text-[17px]">{t.businessTypes.items[0].text}</p>
             </div>
             <div>
               <h4 className="text-[24px] font-bold text-slate-900">{t.businessTypes.items[1].title}</h4>
-              <p className="mt-2 text-[15px] text-slate-600">{t.businessTypes.items[1].text}</p>
+              <p className="mt-2 text-[15px] text-slate-600 lg:text-[17px]">{t.businessTypes.items[1].text}</p>
             </div>
             <div>
               <h4 className="text-[24px] font-bold text-slate-900">{t.businessTypes.items[2].title}</h4>
-              <p className="mt-2 text-[15px] text-slate-600">{t.businessTypes.items[2].text}</p>
+              <p className="mt-2 text-[15px] text-slate-600 lg:text-[17px]">{t.businessTypes.items[2].text}</p>
             </div>
           </div>
         </div>
