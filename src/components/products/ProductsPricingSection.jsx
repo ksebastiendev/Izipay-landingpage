@@ -6,7 +6,7 @@ export default function ProductsPricingSection() {
 
   return (
     <section className="bg-[#008080] py-14 md:py-16">
-      <div className="mx-auto w-full max-w-[1120px] px-4 md:px-5">
+      <div className="mx-auto w-full px-[0.8rem] sm:px-[0.9rem] md:px-[1.2rem] max-w-[600px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1180px] 2xl:max-w-[1400px]">
 
         <div className="mb-10 flex flex-wrap items-center justify-between gap-4">
           <h3 className="text-[28px] font-bold leading-tight tracking-[-0.02em] text-white md:text-[38px]">
@@ -20,7 +20,7 @@ export default function ProductsPricingSection() {
           </a>
         </div>
 
-        <div className="grid gap-5 sm:grid-cols-3">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:gap-6">
           {pricingPlansMeta.map((planMeta, index) => {
             const translatedPlan = t.products.pricing.plans[index]
 

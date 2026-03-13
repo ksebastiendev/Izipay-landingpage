@@ -7,7 +7,7 @@ export default function ProductsHeroSection() {
 
   return (
     <section className="bg-[#f6f7fb] pt-12 pb-14 md:pt-16 md:pb-20">
-      <div className="mx-auto grid w-full max-w-[1120px] items-center gap-8 px-4 md:px-5 lg:grid-cols-2 lg:gap-12">
+      <div className="mx-auto grid w-full items-center gap-8 px-[0.8rem] sm:px-[0.9rem] md:px-[1.2rem] max-w-[600px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1180px] 2xl:max-w-[1400px] lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-12 xl:gap-16">
         <div>
           <h1 className="max-w-[520px] text-[36px] font-bold leading-[1.1] tracking-[-0.02em] text-slate-900 sm:text-[44px] lg:text-[56px]">
             {t.products.hero.title}

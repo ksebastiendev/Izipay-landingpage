@@ -8,7 +8,7 @@ export default function ProductsMarketSection() {
 
   return (
     <section className="bg-[#f6f7fb] py-14 md:py-20 overflow-hidden">
-      <div className="mx-auto grid w-full max-w-[1120px] items-center gap-10 px-4 md:px-5 lg:grid-cols-2 lg:gap-12">
+      <div className="mx-auto grid w-full items-center gap-10 px-[0.8rem] sm:px-[0.9rem] md:px-[1.2rem] max-w-[600px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1180px] 2xl:max-w-[1400px] lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-12 xl:gap-16">
 
         {/* Left: text */}
         <div>

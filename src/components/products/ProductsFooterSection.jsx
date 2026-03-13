@@ -6,7 +6,7 @@ export default function ProductsFooterSection() {
 
   return (
     <footer className="bg-white py-8">
-      <div className="mx-auto flex w-full max-w-[1120px] flex-col items-start justify-between gap-5 border-t border-slate-200 px-4 pt-8 text-[14px] text-slate-500 sm:flex-row sm:items-center md:px-5">
+      <div className="mx-auto flex w-full flex-col items-start justify-between gap-5 border-t border-slate-200 px-[0.8rem] pt-8 text-[14px] text-slate-500 sm:flex-row sm:items-center sm:px-[0.9rem] md:px-[1.2rem] max-w-[600px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1180px] 2xl:max-w-[1400px]">
         <a href="/" className="shrink-0">
           <img src="/landing/izipaylogo.png" alt="IzichangePay" className="h-[30px] w-auto" />
         </a>

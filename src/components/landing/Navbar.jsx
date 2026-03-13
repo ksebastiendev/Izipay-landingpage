@@ -8,7 +8,7 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 bg-[#f6f7fb]/90 backdrop-blur-md supports-[backdrop-filter]:bg-[#f6f7fb]/80">
-      <div className="mx-auto flex min-h-[58px] w-full max-w-[1280px] items-center justify-between gap-2 px-4 py-2 sm:h-[64px] sm:py-0 md:px-5">
+      <div className="mx-auto flex min-h-[58px] w-full items-center justify-between gap-2 px-[0.8rem] py-2 sm:h-[64px] sm:px-[0.9rem] sm:py-0 md:px-[1.2rem] max-w-[600px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1180px] 2xl:max-w-[1400px]">
         <a href="/" className="shrink-0">
           <img src="/landing/izipaylogo.png" alt="IzichangePay" className="h-[28px] w-auto max-w-[132px] object-contain sm:h-[34px] sm:max-w-none" />
         </a>
@@ -74,7 +74,7 @@ export default function Navbar() {
 
       {isMobileMenuOpen && (
         <div className="border-t border-slate-200 bg-white lg:hidden">
-          <nav className="mx-auto flex w-full max-w-[1280px] flex-col px-4 py-3 md:px-5">
+          <nav className="mx-auto flex w-full flex-col px-[0.8rem] py-3 sm:px-[0.9rem] md:px-[1.2rem] max-w-[600px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1180px] 2xl:max-w-[1400px]">
             <a href="/products" className="rounded-lg px-2 py-2 text-[16px] font-semibold text-slate-700 hover:bg-slate-50">
               {t.nav.products}
             </a>
