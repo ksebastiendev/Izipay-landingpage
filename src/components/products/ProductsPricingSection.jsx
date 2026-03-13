@@ -5,7 +5,7 @@ export default function ProductsPricingSection() {
   const { t } = useI18n()
 
   return (
-    <section className="bg-[#008080] py-14 md:py-16">
+    <section className="bg-[#008080] py-16 md:py-20 lg:py-[100px]">
       <div className="mx-auto w-full px-[0.8rem] sm:px-[0.9rem] md:px-[1.2rem] max-w-[600px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1180px] 2xl:max-w-[1400px]">
 
         <div className="mb-10 flex flex-wrap items-center justify-between gap-4">
@@ -29,7 +29,9 @@ export default function ProductsPricingSection() {
               key={translatedPlan.label}
               className="flex flex-col items-center rounded-2xl bg-white px-6 py-8 text-center shadow-sm"
             >
-              <img src={planMeta.icon} alt={translatedPlan.alt} className="mb-5 h-16 w-16 object-contain" />
+              <div className="mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-[#EFF0F6]">
+                <img src={planMeta.icon} alt={translatedPlan.alt} className="h-9 w-9 object-contain" />
+              </div>
 
               <p className="text-[38px] font-extrabold leading-none tracking-[-0.03em] text-[#008080]">
                 {planMeta.value}
