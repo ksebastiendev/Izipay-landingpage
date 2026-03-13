@@ -1,26 +1,26 @@
 import { useState } from 'react'
-import { marketSection, cryptoAssets } from './data'
-
-const TABS = ['Disponibles', 'Actifs les plus performants', 'Nouveautés sur Izichange']
+import { useI18n } from '../../i18n/useI18n'
+import { cryptoAssets } from './data'
 
 export default function ProductsMarketSection() {
   const [activeTab, setActiveTab] = useState(0)
+  const { t } = useI18n()
 
   return (
     <section className="bg-[#f6f7fb] py-14 md:py-20 overflow-hidden">
-      <div className="mx-auto grid w-full max-w-[1120px] items-center gap-10 px-4 md:px-5 lg:grid-cols-2 lg:gap-12">
+      <div className="mx-auto grid w-full items-center gap-10 px-[0.8rem] sm:px-[0.9rem] md:px-[1.2rem] max-w-[600px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1180px] 2xl:max-w-[1400px] lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-12 xl:gap-16">
 
         {/* Left: text */}
         <div>
           <h3 className="max-w-[520px] text-[36px] font-bold leading-[1.1] tracking-[-0.02em] text-slate-900 md:text-[48px]">
-            {marketSection.title}
+            {t.products.market.title}
           </h3>
-          <p className="mt-4 max-w-[480px] text-[16px] leading-[1.6] text-slate-600">{marketSection.description}</p>
+          <p className="mt-4 max-w-[480px] text-[16px] leading-[1.6] text-slate-600">{t.products.market.description}</p>
           <a
             href="#"
             className="mt-7 inline-flex h-10 items-center rounded-xl bg-[#008080] px-5 text-[14px] font-semibold text-white transition hover:bg-[#007373]"
           >
-            {marketSection.cta}
+            {t.products.market.cta}
           </a>
         </div>
 
@@ -30,7 +30,7 @@ export default function ProductsMarketSection() {
 
             {/* Tabs */}
             <div className="mb-5 flex gap-1 rounded-xl bg-white/5 p-1">
-              {TABS.map((tab, i) => (
+              {t.products.market.tabs.map((tab, i) => (
                 <button
                   key={tab}
                   type="button"

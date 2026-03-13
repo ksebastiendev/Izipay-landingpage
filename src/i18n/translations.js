@@ -133,6 +133,85 @@ export const translations = {
         },
       ],
     },
+    products: {
+      hero: {
+        title: 'Des outils puissants pour accepter les paiements crypto',
+        description:
+          'IzichangePay propose plusieurs solutions pour aider les entreprises et les particuliers a recevoir des paiements en cryptomonnaies et a les convertir instantanement en devise locale.',
+        cta: 'Commencer',
+        imageAlt: 'Visuel principal des produits',
+      },
+      blocks: [
+        {
+          title: 'Portefeuille crypto',
+          description:
+            'Le portefeuille Izichange permet de stocker, recevoir et gerer facilement les paiements crypto, avec conversion automatique en monnaie fiat si necessaire.',
+          points: ['Recevez des paiements en cryptomonnaies en toute securite et convertissez-les dans la devise locale de votre choix.'],
+          cta: 'Creer un portefeuille',
+          imageAlt: 'Portefeuille crypto',
+        },
+        {
+          title: 'API de paiement',
+          description:
+            'Integrez les paiements crypto directement dans votre site web, application ou plateforme. Notre API orientee developpeurs permet d accepter des paiements crypto partout dans le monde avec conversion automatique en devise locale.',
+          points: [],
+          cta: 'Voir la documentation API',
+          imageAlt: 'API de paiement',
+        },
+        {
+          title: 'Terminal de paiement POS',
+          description:
+            'Acceptez les paiements en cryptomonnaies en point de vente physique avec des terminaux POS. Les commercants recoivent des paiements crypto et les convertissent instantanement en devise locale.',
+          points: [],
+          cta: 'Decouvrir POS',
+          imageAlt: 'Terminal de paiement POS',
+        },
+        {
+          title: 'Liens de paiement',
+          description:
+            'Creez des liens de paiement simples pour recevoir des cryptomonnaies de partout. Partagez le lien avec vos clients et recevez les paiements instantanement, avec conversion automatique vers votre portefeuille local.',
+          points: [],
+          cta: 'Creer un lien de paiement',
+          imageAlt: 'Liens de paiement',
+        },
+      ],
+      pricing: {
+        title: 'Tarification flexible pour chaque entreprise',
+        seeMore: 'Voir plus',
+        plans: [
+          {
+            alt: 'Icone transfert',
+            label: 'TRANSFERT',
+            description: 'Envoi des paiements de vos clients vers votre portefeuille IzichangePay.',
+            fee: 'Frais de 0.8 %',
+            cta: 'Envoyer',
+          },
+          {
+            alt: 'Icone depots',
+            label: 'DEPOTS',
+            description: 'Envoi des paiements de vos clients vers votre portefeuille IzichangePay.',
+            fee: 'Frais de 0.8 %',
+            cta: 'Envoyer',
+          },
+          {
+            alt: 'Icone retraits',
+            label: 'RETRAITS',
+            description: 'Transfert des cryptomonnaies de votre portefeuille IzichangePay vers des adresses de votre choix.',
+            fee: 'Frais fixes par retrait',
+            cta: 'Envoyer',
+          },
+        ],
+      },
+      market: {
+        title: 'Decouvrez des cryptos comme BTC, ETH et DOGE.',
+        description: 'Achetez, vendez et gerez facilement et en toute securite des centaines de cryptomonnaies.',
+        cta: 'Voir plus d actifs',
+        tabs: ['Disponibles', 'Actifs les plus performants', 'Nouveautes sur Izichange'],
+      },
+      footer: {
+        links: ['Documentation', 'Nos Produits', 'Politique de confidentialite'],
+      },
+    },
     footer: {
       brand: 'izichangePay',
       documentation: 'Documentation',
@@ -273,6 +352,85 @@ export const translations = {
           answer: 'Yes, you can monitor transaction status, amounts, and customer payments in real time from your merchant dashboard.',
         },
       ],
+    },
+    products: {
+      hero: {
+        title: 'Powerful Tools to Accept Crypto Payments',
+        description:
+          'IzichangePay provides multiple solutions to help businesses and individuals receive cryptocurrency payments and instantly convert them into local currency.',
+        cta: 'Get started',
+        imageAlt: 'Products hero visual',
+      },
+      blocks: [
+        {
+          title: 'Crypto Wallet',
+          description:
+            'The Izichange Wallet allows users to store, receive, and manage crypto payments easily while automatically converting funds into fiat when needed.',
+          points: ['Receive cryptocurrency payments securely and convert them into your preferred local currency.'],
+          cta: 'Create wallet',
+          imageAlt: 'Crypto wallet',
+        },
+        {
+          title: 'Payment API',
+          description:
+            'Integrate crypto payments directly into your website, application, or platform. Our developer-friendly API allows businesses to accept cryptocurrency payments from customers worldwide with automatic local-currency conversion.',
+          points: [],
+          cta: 'View API Documentation',
+          imageAlt: 'Payment API',
+        },
+        {
+          title: 'POS Payment Terminal',
+          description:
+            'Accept cryptocurrency payments in physical stores using POS devices. Merchants can receive crypto payments from customers and instantly convert them into local currency directly through the terminal.',
+          points: [],
+          cta: 'Discover POS',
+          imageAlt: 'POS payment terminal',
+        },
+        {
+          title: 'Payment Links',
+          description:
+            'Create simple payment links to receive cryptocurrency payments from anywhere. Share the link with your customers and receive payments instantly, with automatic conversion to your local wallet.',
+          points: [],
+          cta: 'Create Payment Link',
+          imageAlt: 'Payment links',
+        },
+      ],
+      pricing: {
+        title: 'Flexible Pricing for Every Business',
+        seeMore: 'See More',
+        plans: [
+          {
+            alt: 'Transfer icon',
+            label: 'TRANSFER',
+            description: 'Transfer your customer payments to your IzichangePay wallet.',
+            fee: '0.8% fee',
+            cta: 'Send',
+          },
+          {
+            alt: 'Deposits icon',
+            label: 'DEPOSITS',
+            description: 'Transfer your customer payments to your IzichangePay wallet.',
+            fee: '0.8% fee',
+            cta: 'Send',
+          },
+          {
+            alt: 'Withdrawals icon',
+            label: 'WITHDRAWALS',
+            description: 'Transfer cryptocurrencies from your IzichangePay wallet to addresses of your choice.',
+            fee: 'Fixed fee per withdrawal',
+            cta: 'Send',
+          },
+        ],
+      },
+      market: {
+        title: 'Discover crypto assets like BTC, ETH, and DOGE.',
+        description: 'Buy, sell, and manage hundreds of cryptocurrencies easily and securely.',
+        cta: 'See more assets',
+        tabs: ['Available', 'Top performing assets', 'New on Izichange'],
+      },
+      footer: {
+        links: ['Documentation', 'Products', 'Privacy Policy'],
+      },
     },
     footer: {
       brand: 'izichangePay',

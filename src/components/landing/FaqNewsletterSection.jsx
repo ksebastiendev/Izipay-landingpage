@@ -31,11 +31,11 @@ export default function FaqNewsletterSection() {
   }
 
   return (
-    <section className="bg-white py-20 lg:py-24">
-      <div className="mx-auto grid w-full max-w-[1120px] gap-12 px-4 md:px-5 lg:grid-cols-2">
+    <section className="bg-white pt-16 pb-16 lg:pt-20 lg:pb-20">
+      <div className="mx-auto grid w-full gap-10 px-[0.8rem] sm:px-[0.9rem] md:px-[1.2rem] max-w-[600px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1180px] 2xl:max-w-[1400px] lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-12 xl:gap-14">
         <div>
-          <h3 className="text-[52px] font-extrabold leading-[1.05] tracking-[-0.03em] text-slate-900">{t.faqNewsletter.title}</h3>
-          <p className="mt-2 max-w-[460px] text-[16px] text-slate-600">
+          <h3 className="max-w-[560px] text-[48px] font-extrabold leading-[1.06] tracking-[-0.03em] text-slate-900 lg:text-[52px]">{t.faqNewsletter.title}</h3>
+          <p className="mt-2 max-w-[460px] text-[16px] text-slate-600 lg:text-[18px]">
             {t.faqNewsletter.description}
           </p>
           <div className="mt-7 flex max-w-[420px] items-center gap-3">
@@ -47,7 +47,7 @@ export default function FaqNewsletterSection() {
           </div>
         </div>
 
-        <div className="divide-y divide-slate-200 border-t border-slate-200">
+        <div className="divide-y divide-slate-200 border-t border-slate-200 pt-1">
           {visibleFaqs.map((faq, index) => {
             const isOpen = openFaqIndex === index
 
@@ -63,14 +63,14 @@ export default function FaqNewsletterSection() {
                     {isOpen ? <FiMinus size={14} /> : <FiPlus size={14} />}
                   </span>
                 </button>
-                {isOpen && <p className="pb-3 pr-8 text-[15px] leading-6 text-slate-600">{faq.answer}</p>}
+                {isOpen && <p className="pb-3 pr-8 text-[15px] leading-6 text-slate-600 lg:text-[17px]">{faq.answer}</p>}
               </div>
             )
           })}
           <button
             type="button"
             onClick={toggleMoreFaqs}
-            className="group mt-5 inline-flex items-center gap-2 text-[14px] font-semibold text-[#008080]"
+            className="group mt-4 inline-flex items-center gap-2 text-[14px] font-semibold text-[#008080]"
           >
             {isMoreOpen ? t.faqNewsletter.lessFaq : t.faqNewsletter.moreFaq}
             {isMoreOpen ? <FiMinus size={16} /> : <FiPlus size={16} />}

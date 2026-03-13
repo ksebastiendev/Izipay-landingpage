@@ -23,7 +23,7 @@ export default function WhyChooseSection() {
 
   return (
     <section className="bg-white py-20 lg:py-24">
-      <div className="mx-auto w-full max-w-[1120px] px-4 md:px-5">
+      <div className="mx-auto w-full px-[0.8rem] sm:px-[0.9rem] md:px-[1.2rem] max-w-[600px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1180px] 2xl:max-w-[1400px]">
         <div className="flex items-center justify-between gap-4">
           <h2 className="text-[48px] font-extrabold tracking-[-0.02em] text-slate-900">{t.whyChoose.title}</h2>
           <div className="flex items-center gap-2">
@@ -49,8 +49,8 @@ export default function WhyChooseSection() {
               <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[#008080]">
                 <img src={card.icon} alt="icon" className="h-7 w-7 object-contain" />
               </div>
-              <h3 className="mt-6 text-[22px] font-bold text-slate-900">{card.title}</h3>
-              <p className="mt-3 text-[14px] leading-6 text-slate-600">{card.text}</p>
+              <h3 className="mt-6 text-[24px] font-bold text-slate-900">{card.title}</h3>
+              <p className="mt-3 text-[14px] leading-6 text-slate-600 lg:text-[16px]">{card.text}</p>
               </article>
             ))}
           </div>

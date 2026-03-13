@@ -1,15 +1,18 @@
-import { footerLinks, socials } from './data'
+import { useI18n } from '../../i18n/useI18n'
+import { socials } from './data'
 
 export default function ProductsFooterSection() {
+  const { t } = useI18n()
+
   return (
-    <footer className="bg-white py-8">
-      <div className="mx-auto flex w-full max-w-[1120px] flex-col items-start justify-between gap-5 border-t border-slate-200 px-4 pt-8 text-[14px] text-slate-500 sm:flex-row sm:items-center md:px-5">
+    <footer className="bg-white pt-6 pb-8 lg:pt-8">
+      <div className="mx-auto flex w-full flex-col items-start justify-between gap-5 px-[0.8rem] text-[14px] text-slate-500 sm:flex-row sm:items-center sm:px-[0.9rem] md:px-[1.2rem] max-w-[600px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1180px] 2xl:max-w-[1400px]">
         <a href="/" className="shrink-0">
           <img src="/landing/izipaylogo.png" alt="IzichangePay" className="h-[30px] w-auto" />
         </a>
 
         <div className="flex flex-wrap items-center gap-6 text-[14px] font-medium text-slate-500 sm:gap-8">
-          {footerLinks.map((item) => (
+          {t.products.footer.links.map((item) => (
             <a key={item} href="#" className="transition hover:text-[#008080]">
               {item}
             </a>
