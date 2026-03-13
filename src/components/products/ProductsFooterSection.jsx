@@ -1,6 +1,9 @@
-import { footerLinks, socials } from './data'
+import { useI18n } from '../../i18n/useI18n'
+import { socials } from './data'
 
 export default function ProductsFooterSection() {
+  const { t } = useI18n()
+
   return (
     <footer className="bg-white py-8">
       <div className="mx-auto flex w-full max-w-[1120px] flex-col items-start justify-between gap-5 border-t border-slate-200 px-4 pt-8 text-[14px] text-slate-500 sm:flex-row sm:items-center md:px-5">
@@ -9,7 +12,7 @@ export default function ProductsFooterSection() {
         </a>
 
         <div className="flex flex-wrap items-center gap-6 text-[14px] font-medium text-slate-500 sm:gap-8">
-          {footerLinks.map((item) => (
+          {t.products.footer.links.map((item) => (
             <a key={item} href="#" className="transition hover:text-[#008080]">
               {item}
             </a>
