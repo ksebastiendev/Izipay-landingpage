@@ -50,7 +50,7 @@ export default function HeroSection() {
         </div>
 
         <div className="relative flex justify-center lg:-mt-8 lg:justify-end xl:-mt-12">
-          <img src="/landing/hero-section.png" alt={t.hero.imageAlt} className="w-full max-w-[720px] lg:max-w-[900px] xl:max-w-[980px]" />
+          <img src="/landing/image-header.png" alt={t.hero.imageAlt} className="w-full max-w-[560px] lg:max-w-none lg:w-full xl:w-full" />
         </div>
       </div>
     </section>
