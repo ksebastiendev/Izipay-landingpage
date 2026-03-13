@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { useI18n } from '../../i18n/useI18n'
 
+const DOCS_URL = 'https://cryptogateway-project.github.io/cryptogateway-project/'
+
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const { language, setLanguage, t } = useI18n()
@@ -17,7 +19,7 @@ export default function Navbar() {
           <a href="/products" className="text-[15px] font-semibold leading-none text-slate-500 transition hover:text-[#008080]">
             {t.nav.products}
           </a>
-          <a href="#" className="text-[15px] font-semibold leading-none text-slate-500 transition hover:text-[#008080]">
+          <a href={DOCS_URL} target="_blank" rel="noreferrer" className="text-[15px] font-semibold leading-none text-slate-500 transition hover:text-[#008080]">
             {t.nav.docs}
           </a>
           <a href="#" className="text-[15px] font-semibold leading-none text-slate-500 transition hover:text-[#008080]">
@@ -78,7 +80,7 @@ export default function Navbar() {
             <a href="/products" className="rounded-lg px-2 py-2 text-[16px] font-semibold text-slate-700 hover:bg-slate-50">
               {t.nav.products}
             </a>
-            <a href="#" className="rounded-lg px-2 py-2 text-[16px] font-semibold text-slate-700 hover:bg-slate-50">
+            <a href={DOCS_URL} target="_blank" rel="noreferrer" className="rounded-lg px-2 py-2 text-[16px] font-semibold text-slate-700 hover:bg-slate-50">
               {t.nav.docs}
             </a>
             <a href="#" className="rounded-lg px-2 py-2 text-[16px] font-semibold text-slate-700 hover:bg-slate-50">

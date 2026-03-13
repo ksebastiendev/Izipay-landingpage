@@ -1,6 +1,8 @@
 import { useI18n } from '../../i18n/useI18n'
 import { socials } from './data'
 
+const DOCS_URL = 'https://cryptogateway-project.github.io/cryptogateway-project/'
+
 export default function ProductsFooterSection() {
   const { t } = useI18n()
 
@@ -12,8 +14,8 @@ export default function ProductsFooterSection() {
         </a>
 
         <div className="flex flex-wrap items-center gap-6 text-[14px] font-medium text-slate-500 sm:gap-8">
-          {t.products.footer.links.map((item) => (
-            <a key={item} href="#" className="transition hover:text-[#008080]">
+          {t.products.footer.links.map((item, index) => (
+            <a key={item} href={index === 0 ? DOCS_URL : '#'} target={index === 0 ? '_blank' : undefined} rel={index === 0 ? 'noreferrer' : undefined} className="transition hover:text-[#008080]">
               {item}
             </a>
           ))}
