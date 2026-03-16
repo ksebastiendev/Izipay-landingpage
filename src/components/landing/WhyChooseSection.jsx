@@ -25,7 +25,7 @@ export default function WhyChooseSection() {
     <section className="bg-white py-20 lg:py-24">
       <div className="mx-auto w-full px-[0.8rem] sm:px-[0.9rem] md:px-[1.2rem] max-w-[600px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1180px] 2xl:max-w-[1400px]">
         <div className="flex items-center justify-between gap-4">
-          <h2 className="text-[48px] font-extrabold tracking-[-0.02em] text-slate-900">{t.whyChoose.title}</h2>
+          <h2 className="text-[40px] font-extrabold tracking-[-0.02em] text-slate-900 lg:text-[44px]">{t.whyChoose.title}</h2>
           <div className="flex items-center gap-2">
             <button type="button" aria-label={t.whyChoose.previous} className="shrink-0" onClick={() => scrollCards(-1)}>
               <img src="/landing/Button.svg" alt={t.whyChoose.previous} className="h-11 w-11" />

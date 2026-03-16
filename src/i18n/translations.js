@@ -10,10 +10,10 @@ export const translations = {
       language: 'Langue',
     },
     hero: {
-      title: 'Acceptez les paiements crypto. Recevez votre argent en devise locale.',
-      titleLines: ['Acceptez les paiements crypto.', 'Recevez votre argent en devise', 'locale.'],
+      title: 'Acceptez les paiements en crypto depuis l’Afrique. Recevez votre argent directement en devise locale.',
+      titleLines: ['Acceptez les paiements en crypto', 'depuis l’Afrique.', 'Recevez votre argent directement', 'en devise locale.'],
       description:
-        'IzichangePay permet aux entreprises d’accepter des paiements en cryptomonnaies depuis le monde entier tout en les convertissant automatiquement dans la devise de leur choix.',
+        'IzichangePay permet aux entreprises d’accepter des paiements en cryptomonnaies depuis n’importe où en Afrique et de les convertir automatiquement dans la devise locale de leur choix.',
       emailPlaceholder: 'Adresse email',
       cta: 'Commencer',
       arrowAlt: 'Flèche',
@@ -23,20 +23,20 @@ export const translations = {
       text: 'Adopté par les entreprises digitales et les marchands en ligne',
     },
     whyChoose: {
-      title: 'Pourquoi choisir IzichangePay ?',
+      title: 'Pourquoi les entreprises choisissent IzichangePay ?',
       previous: 'Précédent',
       next: 'Suivant',
       cards: [
         {
           title: 'Paiements crypto instantanés',
-          text: 'Acceptez des paiements en Bitcoin, Ethereum et autres cryptomonnaies directement auprès de vos clients partout dans le monde.',
+          text: 'Acceptez des paiements en Bitcoin, Ethereum et autres cryptomonnaies directement auprès de vos clients partout en Afrique, sans délai bancaire.',
         },
         {
-          title: 'Clients internationaux',
-          text: 'Permettez à des clients du monde entier de payer facilement en crypto sans les limites des banques traditionnelles.',
+          title: 'Clients diversifiés',
+          text: 'Permettez à vos clients en Afrique de payer facilement en cryptomonnaies, sans les contraintes des banques traditionnelles.',
         },
         {
-          title: 'Transactions sécurisées',
+          title: 'Transactions sécurisées par la blockchain',
           text: 'Chaque transaction est sécurisée par la blockchain et visible en temps réel via votre tableau de bord marchand.',
         },
         {
@@ -46,41 +46,41 @@ export const translations = {
       ],
     },
     receiveAnywhere: {
-      title: 'Recevez des paiements crypto depuis partout',
+      title: 'Recevez des paiements en cryptomonnaies depuis n’importe où en Afrique',
       imageAlt: 'Recevoir la crypto partout',
     },
     simpleWay: {
-      title: 'Une façon simple d’accepter les paiements crypto',
+      title: 'La solution simple pour accepter les paiements en crypto',
       description:
-        'Intégrez IzichangePay à votre site web, application ou boutique en ligne et commencez à accepter les paiements en cryptomonnaies en quelques minutes.',
+        'Intégrez IzichangePay à votre site web, application ou boutique en ligne et commencez à accepter les paiements en cryptomonnaies en quelques minutes seulement.',
       cta: 'Explorer l’intégration',
       arrowAlt: 'Flèche',
       imageAlt: 'Solution simple pour accepter la crypto',
     },
     businessTypes: {
-      title: 'Conçu pour chaque type de business digital',
+      title: 'Une solution adaptée à tous les types de business digitaux',
       items: [
         {
-          title: 'eCommerce',
-          text: 'Acceptez les paiements en cryptomonnaies dans votre boutique en ligne.',
+          title: 'E-commerce',
+          text: 'Acceptez les paiements en cryptomonnaies sur votre boutique en ligne et vendez à des clients partout dans le monde.',
         },
         {
-          title: 'Plateformes SaaS',
-          text: 'Permettez à vos utilisateurs de payer leurs abonnements en crypto.',
+          title: 'SaaS',
+          text: 'Permettez à vos utilisateurs de payer leurs abonnements en crypto de façon simple et sécurisée.',
         },
         {
           title: 'Freelancers',
-          text: 'Recevez des paiements internationaux sans dépendre des banques traditionnelles.',
+          text: 'Recevez des paiements en crypto rapidement, sans dépendre des banques traditionnelles.',
         },
       ],
       imageAlt: 'Cas d’usage métiers',
     },
     dashboard: {
-      title: 'Un tableau de bord puissant pour gérer vos paiements',
+      title: 'Un tableau de bord puissant pour gérer vos paiements en cryptomonnaies',
       imageAlt: 'Tableau de bord',
     },
     testimonials: {
-      title: 'Que pensent nos clients ?',
+      title: 'Ce que disent nos clients',
       items: [
         {
           text: 'IzichangePay a transformé la façon dont j’accepte les paiements en ligne. L’intégration est intuitive et l’équipe offre un support 5/5. Je les recommande vivement !',
@@ -100,8 +100,8 @@ export const translations = {
       ],
     },
     faqNewsletter: {
-      title: 'Comment pouvons-nous vous aider ?',
-      description: 'Suivez notre newsletter. Nous partageons régulièrement nos nouveautés et disponibilités.',
+      title: 'Besoin d’aide pour accepter les paiements crypto ?',
+      description: 'Inscrivez-vous à notre newsletter et recevez nos nouveautés, mises à jour produit et conseils sur les paiements crypto.',
       emailPlaceholder: 'Adresse email',
       cta: 'On se connecte',
       moreFaq: 'Plus de FAQ',

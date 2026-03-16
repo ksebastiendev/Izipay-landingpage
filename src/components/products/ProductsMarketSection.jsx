@@ -12,7 +12,7 @@ export default function ProductsMarketSection() {
 
         {/* Left: text */}
         <div>
-          <h3 className="max-w-[520px] text-[36px] font-bold leading-[1.1] tracking-[-0.02em] text-slate-900 md:text-[48px]">
+          <h3 className="max-w-[520px] text-[34px] font-bold leading-[1.1] tracking-[-0.02em] text-slate-900 md:text-[42px] lg:text-[44px]">
             {t.products.market.title}
           </h3>
           <p className="mt-4 max-w-[480px] text-[16px] leading-[1.6] text-slate-600">{t.products.market.description}</p>
