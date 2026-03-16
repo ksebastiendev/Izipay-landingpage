@@ -63,6 +63,18 @@ body {
   }
 }
 
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 @keyframes trust-marquee-scroll {
   0% {
     transform: translateX(0);
@@ -101,6 +113,15 @@ body {
   display: inline-block;
 }
 
+.animate-float {
+  animation: float 6.5s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 7.4s ease-in-out infinite;
+  animation-delay: 0.9s;
+}
+
 .group:hover .cta-arrow {
   animation: arrow-nudge 0.7s ease-in-out infinite;
 }
@@ -127,6 +148,11 @@ body {
   }
 
   .trust-marquee-track {
+    animation: none;
+  }
+
+  .animate-float,
+  .animate-float-delayed {
     animation: none;
   }
 }

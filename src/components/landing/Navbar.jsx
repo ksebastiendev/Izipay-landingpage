@@ -9,7 +9,7 @@ export default function Navbar() {
   const languageFlag = language === 'FR' ? '/landing/fr-contry-flag.png' : '/landing/country-flag.png'
 
   return (
-    <header className="sticky top-0 z-50 bg-[#f6f7fb]/90 backdrop-blur-md supports-[backdrop-filter]:bg-[#f6f7fb]/80">
+    <header className="sticky top-0 z-50 border-b border-[#008080]/10 bg-white/90 backdrop-blur-md supports-[backdrop-filter]:bg-white/85">
       <div className="mx-auto flex min-h-[58px] w-full items-center justify-between gap-2 px-[0.8rem] py-2 sm:h-[64px] sm:px-[0.9rem] sm:py-0 md:px-[1.2rem] max-w-[600px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1180px] 2xl:max-w-[1400px]">
         <a href="/" className="shrink-0">
           <img src="/landing/izipaylogo.png" alt="IzichangePay" className="h-[28px] w-auto max-w-[132px] object-contain sm:h-[34px] sm:max-w-none" />

@@ -18,16 +18,16 @@ export default function TestimonialsSection() {
   const { t } = useI18n()
 
   return (
-    <section className="bg-white py-20 lg:py-24">
+    <section className="bg-[#23253D] py-20 lg:py-24">
       <div className="mx-auto w-full px-[0.8rem] sm:px-[0.9rem] md:px-[1.2rem] max-w-[600px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1180px] 2xl:max-w-[1400px]">
-        <h3 className="max-w-[720px] text-[42px] font-extrabold leading-[1.08] tracking-[-0.03em] text-slate-900 lg:text-[46px]">{t.testimonials.title}</h3>
+        <h3 className="max-w-[720px] text-[42px] font-extrabold leading-[1.08] tracking-[-0.03em] text-white lg:text-[46px]">{t.testimonials.title}</h3>
         <div className="mt-10 grid items-stretch gap-5 md:grid-cols-2 lg:grid-cols-3 xl:gap-6">
           {t.testimonials.items.map((item) => (
             <article
               key={item.name}
-              className="flex min-h-[240px] flex-col justify-between rounded-[20px] border border-slate-200/90 bg-white p-5 shadow-[0_10px_28px_rgba(15,23,42,0.04)] transition-transform duration-300 hover:-translate-y-1 lg:min-h-[255px] lg:p-6"
+              className="flex min-h-[240px] flex-col justify-between rounded-[20px] border border-white/10 bg-white/7 p-5 shadow-[0_10px_28px_rgba(0,0,0,0.25)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#008080]/30 hover:bg-white/10 lg:min-h-[255px] lg:p-6"
             >
-              <p className="max-w-[30ch] text-[14px] leading-[1.75] text-slate-600 lg:text-[15px]">
+              <p className="max-w-[30ch] text-[14px] leading-[1.75] text-white/70 lg:text-[15px]">
                 {item.text}
               </p>
               <div className="mt-7 flex items-center gap-3">
@@ -43,8 +43,8 @@ export default function TestimonialsSection() {
                   </div>
                 )}
                 <div className="leading-tight">
-                  <p className="text-[15px] font-bold text-slate-900">{item.name}</p>
-                  <p className="mt-1 text-[13px] text-slate-500">{item.role}</p>
+                  <p className="text-[15px] font-bold text-white">{item.name}</p>
+                  <p className="mt-1 text-[13px] text-white/50">{item.role}</p>
                 </div>
               </div>
             </article>
