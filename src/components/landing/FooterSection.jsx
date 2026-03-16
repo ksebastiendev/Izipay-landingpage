@@ -1,5 +1,7 @@
 import { useI18n } from '../../i18n/useI18n'
 
+const DOCS_URL = 'https://cryptogateway-project.github.io/cryptogateway-project/'
+
 const socialLinks = [
   { name: 'Facebook', icon: '/landing/icone%20/facebook.svg' },
   { name: 'Twitter', icon: '/landing/icone%20/tweeter.svg' },
@@ -19,7 +21,7 @@ export default function FooterSection() {
         </div>
 
         <div className="flex items-center gap-8 text-[14px] font-medium text-slate-500">
-          <a href="#" className="transition hover:text-[#008080]">{t.footer.documentation}</a>
+          <a href={DOCS_URL} target="_blank" rel="noreferrer" className="transition hover:text-[#008080]">{t.footer.documentation}</a>
           <a href="#" className="transition hover:text-[#008080]">{t.footer.products}</a>
           <a href="#" className="transition hover:text-[#008080]">{t.footer.privacy}</a>
         </div>
