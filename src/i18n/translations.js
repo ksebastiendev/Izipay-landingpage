@@ -234,10 +234,10 @@ export const translations = {
       language: 'Language',
     },
     hero: {
-      title: 'Accept Crypto Payments. Receive Your Money in Local Currency.',
-      titleLines: ['Accept Crypto Payments.', 'Receive Your Money in', 'Local Currency.'],
+      title: 'Accept crypto payments from Africa. Receive your money directly in local currency.',
+      titleLines: ['Accept crypto payments', 'from Africa.', 'Receive your money directly', 'in local currency.'],
       description:
-        'IzichangePay enables businesses to accept cryptocurrency payments from anywhere in the world while automatically converting them into the currency of their choice.',
+        'IzichangePay enables businesses to accept cryptocurrency payments from anywhere in Africa and automatically convert them into the local currency of their choice.',
       emailPlaceholder: 'Email Address',
       cta: 'Get started',
       arrowAlt: 'Arrow',
@@ -247,20 +247,20 @@ export const translations = {
       text: 'Trusted by digital businesses and online merchants',
     },
     whyChoose: {
-      title: 'Why Choose IzichangePay?',
+      title: 'Why Businesses Choose IzichangePay?',
       previous: 'Previous',
       next: 'Next',
       cards: [
         {
           title: 'Instant Crypto Payments',
-          text: 'Accept payments in Bitcoin, Ethereum and other cryptocurrencies directly from your customers worldwide.',
+          text: 'Accept payments in Bitcoin, Ethereum, and other cryptocurrencies directly from your customers across Africa, without banking delays.',
         },
         {
-          title: 'Global Customers',
-          text: 'Allow customers from anywhere in the world to pay you easily using cryptocurrency without traditional banking limitations.',
+          title: 'Diversified Customers',
+          text: 'Enable your customers in Africa to pay easily in cryptocurrencies, without the constraints of traditional banking.',
         },
         {
-          title: 'Secure Transactions',
+          title: 'Blockchain-Secured Transactions',
           text: 'Every transaction is secured by blockchain technology and visible in real time through your merchant dashboard.',
         },
         {
@@ -270,7 +270,7 @@ export const translations = {
       ],
     },
     receiveAnywhere: {
-      title: 'Receive Crypto Payments From Anywhere',
+      title: 'Receive Crypto Payments from Anywhere in Africa',
       imageAlt: 'Receive crypto anywhere',
     },
     simpleWay: {
@@ -282,25 +282,25 @@ export const translations = {
       imageAlt: 'Simple way to accept crypto',
     },
     businessTypes: {
-      title: 'Built for Every Type of Digital Business',
+      title: 'A Solution Tailored for Every Type of Digital Business',
       items: [
         {
           title: 'eCommerce',
-          text: 'Accept cryptocurrency payments in your online store.',
+          text: 'Accept cryptocurrency payments in your online store and sell to customers worldwide.',
         },
         {
           title: 'SaaS Platforms',
-          text: 'Allow users to pay for subscriptions using crypto.',
+          text: 'Allow your users to pay subscriptions in crypto in a simple and secure way.',
         },
         {
           title: 'Freelancers',
-          text: 'Receive international payments without relying on traditional banks.',
+          text: 'Receive crypto payments quickly without relying on traditional banks.',
         },
       ],
       imageAlt: 'Business use cases',
     },
     dashboard: {
-      title: 'A Powerful Dashboard to Manage Your Payments',
+      title: 'A Powerful Dashboard to Manage Your Cryptocurrency Payments',
       imageAlt: 'Dashboard',
     },
     testimonials: {
@@ -324,8 +324,8 @@ export const translations = {
       ],
     },
     faqNewsletter: {
-      title: 'How can we help you?',
-      description: 'Follow our newsletter. We regularly share our latest updates and availability.',
+      title: 'Need Help Accepting Crypto Payments?',
+      description: 'Subscribe to our newsletter and receive product updates, new features, and practical tips on crypto payments.',
       emailPlaceholder: 'Email Address',
       cta: "Let's Connect",
       moreFaq: 'More FAQ',
