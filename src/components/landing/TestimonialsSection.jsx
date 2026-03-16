@@ -18,7 +18,7 @@ export default function TestimonialsSection() {
   const { t } = useI18n()
 
   return (
-    <section className="bg-[#23253D] py-20 lg:py-24">
+    <section className="bg-[#008080] py-20 lg:py-24">
       <div className="mx-auto w-full px-[0.8rem] sm:px-[0.9rem] md:px-[1.2rem] max-w-[600px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1180px] 2xl:max-w-[1400px]">
         <h3 className="max-w-[720px] text-[42px] font-extrabold leading-[1.08] tracking-[-0.03em] text-white lg:text-[46px]">{t.testimonials.title}</h3>
         <div className="mt-10 grid items-stretch gap-5 md:grid-cols-2 lg:grid-cols-3 xl:gap-6">
