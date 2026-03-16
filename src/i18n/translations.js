@@ -141,6 +141,10 @@ export const translations = {
         cta: 'Commencer',
         imageAlt: 'Visuel principal des produits',
       },
+      showcase: {
+        title: 'Nos Produits',
+        description: 'Des solutions concues pour vous aider a lancer, integrer et encaisser vos paiements crypto en toute simplicite.',
+      },
       blocks: [
         {
           title: 'Portefeuille crypto',
@@ -360,6 +364,10 @@ export const translations = {
           'IzichangePay provides multiple solutions to help businesses and individuals receive cryptocurrency payments and instantly convert them into local currency.',
         cta: 'Get started',
         imageAlt: 'Products hero visual',
+      },
+      showcase: {
+        title: 'Our Products',
+        description: 'Purpose-built solutions to help you launch, integrate, and accept crypto payments with confidence.',
       },
       blocks: [
         {
