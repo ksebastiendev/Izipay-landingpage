@@ -8,7 +8,7 @@ export default function ProductsSolutionsSection() {
     <section className="bg-[#f6f7fb] pt-16 pb-16 md:pt-20 md:pb-24 lg:pt-[100px] lg:pb-[100px]">
       <div className="mx-auto w-full px-[0.8rem] sm:px-[0.9rem] md:px-[1.2rem] max-w-[600px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1180px] 2xl:max-w-[1400px]">
         <div className="mx-auto mb-8 max-w-[760px] text-center md:mb-10">
-          <h2 className="text-[44px] font-extrabold leading-[1.08] tracking-[-0.03em] text-slate-900 sm:text-[48px]">
+          <h2 className="text-[38px] font-extrabold leading-[1.08] tracking-[-0.03em] text-slate-900 sm:text-[42px] lg:text-[44px]">
             {t.products.showcase.title}
           </h2>
           <p className="mx-auto mt-3 max-w-[680px] text-[16px] leading-[1.6] text-slate-600">
@@ -32,7 +32,7 @@ export default function ProductsSolutionsSection() {
                 />
 
                 <div className="flex flex-1 flex-col p-6 lg:p-7">
-                  <h2 className="text-[34px] font-bold leading-[1.1] tracking-[-0.02em] text-slate-900">{block.title}</h2>
+                  <h2 className="text-[30px] font-bold leading-[1.1] tracking-[-0.02em] text-slate-900 lg:text-[32px]">{block.title}</h2>
 
                   {block.points.length > 0 ? (
                     <ul className="mt-4 list-none space-y-2 pl-0 text-[16px] leading-[1.6] text-slate-600">

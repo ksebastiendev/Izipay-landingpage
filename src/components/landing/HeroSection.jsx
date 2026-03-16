@@ -8,7 +8,7 @@ export default function HeroSection() {
     <section className="bg-[#00808014]">
       <div className="mx-auto grid w-full items-center gap-8 px-[0.8rem] pt-20 pb-[10px] sm:px-[0.9rem] md:px-[1.2rem] md:pt-24 max-w-[600px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1180px] 2xl:max-w-[1400px] lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-12 xl:gap-16 lg:pt-24 xl:pt-28">
         <div className="max-w-[620px] pb-3 lg:pb-6 xl:pb-8">
-          <h1 className="max-w-[620px] text-[44px] font-bold leading-[1.02] tracking-[-0.03em] text-slate-900 sm:text-[50px] lg:text-[56px] xl:text-[58px]">
+          <h1 className="max-w-[620px] text-[40px] font-bold leading-[1.03] tracking-[-0.03em] text-slate-900 sm:text-[46px] lg:text-[52px] xl:text-[54px]">
             {titleLines.map((line, lineIndex) => {
               const words = line.split(' ')
               const previousWordsCount = titleLines
@@ -31,7 +31,7 @@ export default function HeroSection() {
               )
             })}
           </h1>
-          <p className="mt-6 max-w-[560px] text-[18px] leading-[1.55] text-slate-600 lg:text-[21px]">
+          <p className="mt-6 max-w-[560px] text-[17px] leading-[1.55] text-slate-600 lg:text-[19px]">
             {t.hero.description}
           </p>
           <div className="mt-9 flex max-w-[392px] items-center gap-3">
