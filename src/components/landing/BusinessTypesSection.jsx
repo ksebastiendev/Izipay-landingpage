@@ -7,7 +7,7 @@ export default function BusinessTypesSection() {
     <section className="bg-white py-20 lg:py-24">
       <div className="mx-auto grid w-full gap-12 px-[0.8rem] sm:px-[0.9rem] md:px-[1.2rem] max-w-[600px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1180px] 2xl:max-w-[1400px] lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:items-center lg:gap-14 xl:gap-16">
         <div>
-          <h3 className="max-w-[460px] text-[56px] font-extrabold leading-[1.05] tracking-[-0.03em] text-slate-900">{t.businessTypes.title}</h3>
+          <h3 className="max-w-[460px] text-[42px] font-extrabold leading-[1.05] tracking-[-0.03em] text-slate-900 lg:text-[48px]">{t.businessTypes.title}</h3>
           <div className="mt-8 space-y-6">
             <div>
               <h4 className="text-[24px] font-bold text-slate-900">{t.businessTypes.items[0].title}</h4>
