@@ -14,7 +14,7 @@ export default function ProductsHeroSection() {
           </h1>
           <p className="mt-5 max-w-[510px] text-[16px] leading-[1.6] text-slate-600 lg:text-[17px]">{t.products.hero.description}</p>
           <a
-            href="#"
+            href="/login"
             className="mt-7 inline-flex h-11 items-center rounded-xl bg-[#008080] px-6 text-[15px] font-semibold text-white transition hover:bg-[#007373]"
           >
             {t.products.hero.cta}

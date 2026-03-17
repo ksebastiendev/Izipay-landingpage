@@ -108,28 +108,16 @@ export const translations = {
       lessFaq: 'Moins de FAQ',
       faqs: [
         {
-          question: 'Comment m’inscrire au projet ?',
-          answer: 'Cliquez sur le bouton d’inscription, créez votre compte puis suivez les étapes d’onboarding pour activer votre profil marchand.',
+          question: 'Qu’est-ce que IzichangePay ?',
+          answer: 'IzichangePay est une plateforme d’agrégation de paiement en cryptomonnaies qui facilite les transactions et permet d’accepter et de recevoir des paiements en utilisant différentes cryptomonnaies.',
         },
         {
-          question: 'Que dois-je préparer avant de commencer ?',
-          answer: 'Préparez vos informations business, une adresse email et votre devise de règlement préférée pour une configuration rapide.',
+          question: 'Quels types de cryptomonnaies acceptez-vous sur IzichangePay ?',
+          answer: 'IzichangePay prend en charge plusieurs cryptomonnaies populaires telles que Bitcoin (BTC), Ethereum (ETH), Litecoin (LTC), Ripple (XRP), etc.',
         },
         {
-          question: 'Mon entreprise peut-elle recevoir un accompagnement marketing ?',
-          answer: 'Oui, notre équipe peut vous guider avec des recommandations de lancement et les bonnes pratiques pour présenter le paiement crypto à vos clients.',
-        },
-        {
-          question: 'Puis-je accepter plusieurs cryptomonnaies ?',
-          answer: 'Vous pouvez activer plusieurs cryptos prises en charge et les gérer depuis votre tableau de bord selon vos préférences.',
-        },
-        {
-          question: 'Quel est le délai de règlement des paiements ?',
-          answer: 'Le délai dépend de la confirmation réseau et de vos paramètres de payout, généralement traité rapidement après validation.',
-        },
-        {
-          question: 'Y a-t-il un dashboard pour suivre les transactions ?',
-          answer: 'Oui, vous suivez en temps réel les statuts, montants et paiements clients depuis votre dashboard marchand.',
+          question: 'Est-ce que IzichangePay propose des taux de change compétitifs ?',
+          answer: 'Oui, IzichangePay propose des taux de change compétitifs en temps réel pour vous assurer une valeur précise de vos paiements en cryptomonnaie.',
         },
       ],
     },
@@ -209,7 +197,7 @@ export const translations = {
       market: {
         title: 'Decouvrez des cryptos comme BTC, ETH et DOGE.',
         description: 'Achetez, vendez et gerez facilement et en toute securite des centaines de cryptomonnaies.',
-        cta: 'Voir plus d actifs',
+        cta: 'Commencer',
         tabs: ['Disponibles', 'Actifs les plus performants', 'Nouveautes sur Izichange'],
       },
       footer: {
@@ -332,28 +320,16 @@ export const translations = {
       lessFaq: 'Less FAQ',
       faqs: [
         {
-          question: 'How do I sign up for the project?',
-          answer: 'Click the sign-up button, create your account, and follow onboarding steps to activate your merchant profile.',
+          question: 'What is IzichangePay?',
+          answer: 'IzichangePay is a cryptocurrency payment aggregation platform that simplifies transactions and allows businesses to accept and receive payments using multiple cryptocurrencies.',
         },
         {
-          question: 'What should I prepare before starting?',
-          answer: 'Prepare your business information, an email address, and your preferred payout currency to complete setup quickly.',
+          question: 'Which cryptocurrencies are supported on IzichangePay?',
+          answer: 'IzichangePay supports several popular cryptocurrencies such as Bitcoin (BTC), Ethereum (ETH), Litecoin (LTC), Ripple (XRP), and more.',
         },
         {
-          question: 'Does my company need help with marketing advice?',
-          answer: 'Yes, our team can guide you with launch recommendations and best practices to present crypto checkout to your customers.',
-        },
-        {
-          question: 'Can I accept multiple cryptocurrencies?',
-          answer: 'You can enable multiple supported coins and manage them from your dashboard based on your business preferences.',
-        },
-        {
-          question: 'How fast are settlements processed?',
-          answer: 'Settlement speed depends on network confirmation and your payout settings, usually processed shortly after validation.',
-        },
-        {
-          question: 'Is there a dashboard to track transactions?',
-          answer: 'Yes, you can monitor transaction status, amounts, and customer payments in real time from your merchant dashboard.',
+          question: 'Does IzichangePay offer competitive exchange rates?',
+          answer: 'Yes, IzichangePay provides competitive real-time exchange rates to ensure accurate value for your cryptocurrency payments.',
         },
       ],
     },
@@ -433,7 +409,7 @@ export const translations = {
       market: {
         title: 'Discover crypto assets like BTC, ETH, and DOGE.',
         description: 'Buy, sell, and manage hundreds of cryptocurrencies easily and securely.',
-        cta: 'See more assets',
+        cta: 'Get started',
         tabs: ['Available', 'Top performing assets', 'New on Izichange'],
       },
       footer: {

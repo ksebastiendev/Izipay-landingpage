@@ -1,9 +1,7 @@
-import { useState } from 'react'
 import { useI18n } from '../../i18n/useI18n'
 import { cryptoAssets } from './data'
 
 export default function ProductsMarketSection() {
-  const [activeTab, setActiveTab] = useState(0)
   const { t } = useI18n()
 
   return (
@@ -17,7 +15,7 @@ export default function ProductsMarketSection() {
           </h3>
           <p className="mt-4 max-w-[480px] text-[16px] leading-[1.6] text-slate-600">{t.products.market.description}</p>
           <a
-            href="#"
+            href="/login"
             className="mt-7 inline-flex h-10 items-center rounded-xl bg-[#008080] px-5 text-[14px] font-semibold text-white transition hover:bg-[#007373]"
           >
             {t.products.market.cta}
@@ -28,22 +26,8 @@ export default function ProductsMarketSection() {
         <div className="flex justify-center lg:justify-end">
           <div className="w-full max-w-[480px] rounded-3xl bg-[#0f1117] p-5 shadow-2xl">
 
-            {/* Tabs */}
-            <div className="mb-5 flex gap-1 rounded-xl bg-white/5 p-1">
-              {t.products.market.tabs.map((tab, i) => (
-                <button
-                  key={tab}
-                  type="button"
-                  onClick={() => setActiveTab(i)}
-                  className={`flex-1 truncate rounded-lg px-2 py-1.5 text-[11px] font-semibold transition ${
-                    activeTab === i
-                      ? 'bg-white/10 text-white'
-                      : 'text-white/40 hover:text-white/60'
-                  }`}
-                >
-                  {tab}
-                </button>
-              ))}
+            <div className="mb-5 rounded-xl bg-white/5 px-3 py-2 text-[12px] font-semibold uppercase tracking-[0.08em] text-white/75">
+              {t.products.market.tabs[0]}
             </div>
 
             {/* Crypto rows */}
@@ -71,11 +55,6 @@ export default function ProductsMarketSection() {
                   {/* Price + change */}
                   <div className="text-right">
                     <p className="text-[14px] font-semibold tabular-nums text-white">{asset.price}</p>
-                    <p className={`mt-0.5 text-[11px] font-medium tabular-nums ${
-                      asset.up ? 'text-emerald-400' : 'text-red-400'
-                    }`}>
-                      {asset.change}
-                    </p>
                   </div>
                 </li>
               ))}

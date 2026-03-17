@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IzichangePay | Infrastructure de paiement mondiale</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        :root { 
+            --izi-teal: #008080; --izi-dark: #23253D; 
+            --izi-mint: #F4FFFA; --izi-lblue: #E8EFFF;
+        }
+        
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background: #fff; color: var(--izi-dark); 
+            overflow-x: hidden; letter-spacing: -0.02em;
+        }
+
+        /* Typold Aesthetic */
+        h1, h2, h3 { font-weight: 800; letter-spacing: -0.04em; }
+
+        /* Hero with Paybis Background */
+        .hero-section {
+            position: relative;
+            background-image: url('https://paybis.com/vite/assets/bg-mobile-jDLrEoT8.svg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+        }
+        .hero-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to bottom, rgba(255,255,255,0.2) 0%, #fff 100%);
+        }
+
+        /* Marquee Animation */
+        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        .animate-marquee { animation: marquee 25s linear infinite; }
+
+        /* --- STICKY SECTION --- */
+        .sticky-outer { position: relative; width: 100%; }
+        .sticky-inner { height: 100vh; display: flex; align-items: center; }
+        
+        .img-stack {
+            position: relative; width: 100%; height: 60vh;
+            border-radius: 40px; overflow: hidden;
+            box-shadow: 0 40px 100px -20px rgba(35, 37, 61, 0.15);
+        }
+        .v-img {
+            position: absolute; inset: 0; width: 100%; height: 100%;
+            object-fit: cover; opacity: 0; transform: scale(1.1);
+            transition: opacity 0.8s ease, transform 1.2s ease;
+        }
+        .v-img.active { opacity: 1; transform: scale(1); }
+
+        .text-stack { position: relative; height: 250px; width: 100%; }
+        .step-text {
+            position: absolute; inset: 0; opacity: 0; 
+            transform: translateY(30px); visibility: hidden;
+            transition: all 0.6s ease;
+        }
+        .step-text.active { opacity: 1; transform: translateY(0); visibility: visible; }
+
+        /* Progress Dots */
+        .progress-dot { width: 6px; height: 6px; border-radius: 50%; background: #E2E8F0; transition: all 0.3s ease; }
+        .progress-dot.active { height: 30px; background: var(--izi-teal); border-radius: 10px; }
+
+        /* Globe Canvas */
+        #globe-wrap { position: relative; width: 100%; height: 100vh; background: #040d21; overflow: hidden; }
+        #canvas-globe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        .globe-content { position: relative; z-index: 10; pointer-events: none; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+
+        .btn-izi {
+            background: var(--izi-teal); color: white; padding: 14px 32px; border-radius: 12px;
+            font-weight: 800; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .btn-izi:hover { transform: translateY(-3px); box-shadow: 0 15px 30px rgba(0, 128, 128, 0.3); }
+    </style>
+</head>
+<body>
+
+
+    <!-- STICKY SECTION -->
+    <div class="sticky-outer" id="activities">
+        <div class="sticky-inner">
+            <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-24 items-center w-full">
+                <!-- Images -->
+                <div class="img-stack">
+                    <img src="https://images.unsplash.com/photo-1556742044-3c52d6e88c62?q=80&w=2000" class="v-img active" id="i-0">
+                    <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=2000" class="v-img" id="i-1">
+                    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2000" class="v-img" id="i-2">
+                </div>
+                <!-- Text + Progress -->
+                <div class="flex items-center gap-12">
+                    <div class="flex flex-col gap-4">
+                        <div class="progress-dot active" id="dot-0"></div>
+                        <div class="progress-dot" id="dot-1"></div>
+                        <div class="progress-dot" id="dot-2"></div>
+                    </div>
+                    <div class="text-stack">
+                        <div class="step-text active" id="t-0">
+                            <span class="text-[#008080] font-black uppercase text-xs tracking-widest mb-6 block">01 / E-commerce</span>
+                            <h3 class="text-5xl font-[800] text-[#23253D] mb-8 leading-tight">Vendez partout. <br> Encaissez ici.</h3>
+                            <p class="text-xl text-gray-500 leading-relaxed">Vos clients paient en Bitcoin ou USDT, vous recevez vos fonds directement sur votre Mobile Money.</p>
+                        </div>
+                        <div class="step-text" id="t-1">
+                            <span class="text-[#008080] font-black uppercase text-xs tracking-widest mb-6 block">02 / SaaS</span>
+                            <h3 class="text-5xl font-[800] text-[#23253D] mb-8 leading-tight">Abonnements <br> automatisés.</h3>
+                            <p class="text-xl text-gray-500 leading-relaxed">Gérez vos revenus récurrents via notre API robuste conçue pour la scalabilité des startups.</p>
+                        </div>
+                        <div class="step-text" id="t-2">
+                            <span class="text-[#008080] font-black uppercase text-xs tracking-widest mb-6 block">03 / Freelance</span>
+                            <h3 class="text-5xl font-[800] text-[#23253D] mb-8 leading-tight">Honoraires <br> sans frontières.</h3>
+                            <p class="text-xl text-gray-500 leading-relaxed">Recevez vos honoraires USDT internationaux et retirez en FCFA en moins de 2 minutes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="h-[300vh]"></div> <!-- Scroll Height -->
+    </div>
+
+
+    <script>
+        lucide.createIcons();
+        gsap.registerPlugin(ScrollTrigger);
+
+        // --- STICKY SCROLL LOGIC ---
+        const texts = document.querySelectorAll('.step-text');
+        const images = document.querySelectorAll('.v-img');
+        const dots = document.querySelectorAll('.progress-dot');
+
+        ScrollTrigger.create({
+            trigger: "#activities",
+            start: "top top",
+            end: "bottom bottom",
+            scrub: true,
+            pin: ".sticky-inner",
+            onUpdate: (self) => {
+                const progress = self.progress;
+                let index = progress < 0.33 ? 0 : progress < 0.66 ? 1 : 2;
+
+                texts.forEach((t, i) => t.classList.toggle('active', i === index));
+                images.forEach((img, i) => img.classList.toggle('active', i === index));
+                dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
+            }
+        });
+
+        // --- THREE.JS GLOBE ENGINE ---
+        const canvas = document.getElementById('canvas-globe');
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+
+        const globeGroup = new THREE.Group();
+        const geometry = new THREE.SphereGeometry(100, 64, 64);
+        const material = new THREE.MeshPhongMaterial({ color: 0x040d21, emissive: 0x008080, emissiveIntensity: 0.15, shininess: 50 });
+        globeGroup.add(new THREE.Mesh(geometry, material));
+
+        const ptsMat = new THREE.PointsMaterial({ color: 0x00ffcc, size: 0.6, transparent: true, opacity: 0.4 });
+        globeGroup.add(new THREE.Points(new THREE.SphereGeometry(101, 64, 64), ptsMat));
+        
+        scene.add(globeGroup);
+        scene.add(new THREE.AmbientLight(0xffffff, 0.5));
+        const light = new THREE.DirectionalLight(0xffffff, 1);
+        light.position.set(5, 3, 5);
+        scene.add(light);
+        camera.position.z = 280;
+
+        function createArc() {
+            const start = new THREE.Vector3((Math.random()-0.5)*200, (Math.random()-0.5)*200, (Math.random()-0.5)*200).normalize().multiplyScalar(100);
+            const end = new THREE.Vector3(20, 15, 95); 
+            const mid = start.clone().lerp(end, 0.5).multiplyScalar(1.5);
+            const curve = new THREE.QuadraticBezierCurve3(start, mid, end);
+            const pts = curve.getPoints(50);
+            const line = new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts), new THREE.LineBasicMaterial({ color: 0x008080, transparent: true, opacity: 0.4 }));
+            globeGroup.add(line);
+            setTimeout(() => { globeGroup.remove(line); }, 3000);
+        }
+        setInterval(createArc, 400);
+
+        function animate() {
+            requestAnimationFrame(animate);
+            globeGroup.rotation.y += 0.002;
+            renderer.render(scene, camera);
+        }
+        animate();
+
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+    </script>
+</body>
+</html>
