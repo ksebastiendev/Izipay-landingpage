@@ -44,9 +44,9 @@ export default function LandingPage() {
       <div data-reveal style={{ '--reveal-delay': '80ms' }}>
         <WhyChooseSection />
       </div>
-      <div data-reveal style={{ '--reveal-delay': '80ms' }}>
+      {/* <div data-reveal style={{ '--reveal-delay': '80ms' }}>
         <ReceiveAnywhereSection />
-      </div>
+      </div> */}
       <div data-reveal style={{ '--reveal-delay': '90ms' }}>
         <SimpleWaySection />
       </div>

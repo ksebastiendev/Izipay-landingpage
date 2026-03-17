@@ -84,6 +84,36 @@ body {
   }
 }
 
+@keyframes orbit-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes orbit-counter-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes center-float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .hero-title-line {
   display: block;
 }
@@ -111,6 +141,34 @@ body {
 
 .cta-arrow {
   display: inline-block;
+}
+
+.hero-orbit-system {
+  animation: orbit-spin 20s linear infinite;
+  transform-origin: center;
+}
+
+.hero-orbit-node {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(var(--orbit-angle, 0deg)) translateX(var(--orbit-radius, 140px));
+}
+
+.hero-orbit-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(50, 87, 168, 0.24);
+  box-shadow: 0 12px 26px -16px rgba(35, 37, 61, 0.45);
+  padding: 0.45rem;
+  animation: orbit-counter-spin 20s linear infinite;
+}
+
+.hero-center-float {
+  animation: center-float 6.8s ease-in-out infinite;
 }
 
 .animate-float {
@@ -148,6 +206,12 @@ body {
   }
 
   .trust-marquee-track {
+    animation: none;
+  }
+
+  .hero-orbit-system,
+  .hero-orbit-badge,
+  .hero-center-float {
     animation: none;
   }
 

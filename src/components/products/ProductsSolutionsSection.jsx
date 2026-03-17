@@ -1,6 +1,8 @@
 import { useI18n } from '../../i18n/useI18n'
 import { productBlockImages } from './data'
 
+const DOCS_URL = 'https://cryptogateway-project.github.io/cryptogateway-project/'
+
 export default function ProductsSolutionsSection() {
   const { t } = useI18n()
 
@@ -19,6 +21,8 @@ export default function ProductsSolutionsSection() {
         <div className="grid gap-6 md:grid-cols-2 xl:gap-8">
           {t.products.blocks.map((block, index) => {
             const blockImage = productBlockImages[index]
+            const ctaHref = index === 1 ? DOCS_URL : '/login'
+            const isDocsLink = index === 1
 
             return (
               <article
@@ -62,7 +66,9 @@ export default function ProductsSolutionsSection() {
                   )}
 
                   <a
-                    href="#"
+                    href={ctaHref}
+                    target={isDocsLink ? '_blank' : undefined}
+                    rel={isDocsLink ? 'noreferrer' : undefined}
                     className="mt-6 inline-flex h-10 items-center self-start rounded-xl bg-[#008080] px-5 text-[14px] font-semibold text-white transition hover:bg-[#007373]"
                   >
                     {block.cta}
