@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import Navbar from './Navbar'
 import HeroSection from './HeroSection'
-import TrustBanner from './TrustBanner'
+// import TrustBanner from './TrustBanner'
 import WhyChooseSection from './WhyChooseSection'
 import ReceiveAnywhereSection from './ReceiveAnywhereSection'
 import SimpleWaySection from './SimpleWaySection'
@@ -39,14 +39,14 @@ export default function LandingPage() {
       <Navbar />
       <div data-reveal>
         <HeroSection />
-        <TrustBanner />
+        {/* <TrustBanner /> */}
       </div>
       <div data-reveal style={{ '--reveal-delay': '80ms' }}>
         <WhyChooseSection />
       </div>
-      <div data-reveal style={{ '--reveal-delay': '80ms' }}>
+      {/* <div data-reveal style={{ '--reveal-delay': '80ms' }}>
         <ReceiveAnywhereSection />
-      </div>
+      </div> */}
       <div data-reveal style={{ '--reveal-delay': '90ms' }}>
         <SimpleWaySection />
       </div>
