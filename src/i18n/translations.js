@@ -197,7 +197,7 @@ export const translations = {
       market: {
         title: 'Decouvrez des cryptos comme BTC, ETH et DOGE.',
         description: 'Achetez, vendez et gerez facilement et en toute securite des centaines de cryptomonnaies.',
-        cta: 'Commencer',
+        cta: "Voir plus d'actifs",
         tabs: ['Disponibles', 'Actifs les plus performants', 'Nouveautes sur Izichange'],
       },
       footer: {
@@ -409,7 +409,7 @@ export const translations = {
       market: {
         title: 'Discover crypto assets like BTC, ETH, and DOGE.',
         description: 'Buy, sell, and manage hundreds of cryptocurrencies easily and securely.',
-        cta: 'Get started',
+        cta: 'View more assets',
         tabs: ['Available', 'Top performing assets', 'New on Izichange'],
       },
       footer: {

@@ -114,6 +114,34 @@ body {
   }
 }
 
+@keyframes hero-card-orbit {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes hero-card-counter {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes hero-card-pulse {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
 .hero-title-line {
   display: block;
 }
@@ -148,6 +176,12 @@ body {
   transform-origin: center;
 }
 
+.hero-orbit-system-secondary {
+  animation-duration: 30s;
+  animation-direction: reverse;
+  opacity: 0.94;
+}
+
 .hero-orbit-node {
   position: absolute;
   top: 50%;
@@ -167,8 +201,40 @@ body {
   animation: orbit-counter-spin 20s linear infinite;
 }
 
+.hero-orbit-badge-secondary {
+  background: rgba(245, 253, 255, 0.94);
+  border: 1px solid rgba(110, 194, 216, 0.28);
+  box-shadow: 0 14px 24px -18px rgba(8, 53, 99, 0.55);
+  padding: 0.35rem;
+  animation-duration: 30s;
+  animation-direction: normal;
+}
+
 .hero-center-float {
   animation: center-float 6.8s ease-in-out infinite;
+}
+
+.hero-human-visual {
+  isolation: isolate;
+}
+
+.hero-human-orbit {
+  animation: hero-card-orbit 60s linear infinite;
+  transform-origin: 66% 27%;
+}
+
+.hero-human-orbit-node {
+  position: absolute;
+  top: 27%;
+  left: 66%;
+  transform: translate(-50%, -50%) rotate(var(--hero-card-angle, 0deg)) translateX(var(--hero-card-radius, 120px));
+}
+
+.hero-human-orbit-card {
+  display: block;
+  animation: hero-card-counter 60s linear infinite, hero-card-pulse 6s ease-in-out infinite;
+  box-shadow: 0 16px 28px -22px rgba(17, 41, 88, 0.7);
+  border-radius: 0.75rem;
 }
 
 .animate-float {
@@ -211,7 +277,9 @@ body {
 
   .hero-orbit-system,
   .hero-orbit-badge,
-  .hero-center-float {
+  .hero-center-float,
+  .hero-human-orbit,
+  .hero-human-orbit-card {
     animation: none;
   }
 

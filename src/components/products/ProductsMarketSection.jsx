@@ -15,7 +15,7 @@ export default function ProductsMarketSection() {
           </h3>
           <p className="mt-4 max-w-[480px] text-[16px] leading-[1.6] text-slate-600">{t.products.market.description}</p>
           <a
-            href="/login"
+            href="/supported-coins"
             className="mt-7 inline-flex h-10 items-center rounded-xl bg-[#008080] px-5 text-[14px] font-semibold text-white transition hover:bg-[#007373]"
           >
             {t.products.market.cta}

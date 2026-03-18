@@ -23,7 +23,9 @@ export default function FooterSection() {
           {socials.map((item) => (
             <a
               key={item.name}
-              href="#"
+              href={item.href}
+              target="_blank"
+              rel="noreferrer"
               aria-label={item.name}
               className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#008080] transition hover:bg-[#007373]"
             >

@@ -10,15 +10,54 @@ export default function HeroSection() {
   const titleLines = t.hero.titleLines ?? [t.hero.title]
   const displayedTitleLines = titleLines.slice(0, 2)
   const [heroAnimationData, setHeroAnimationData] = useState(null)
+  const [isBitcoinVisualVisible, setIsBitcoinVisualVisible] = useState(false)
   const [email, setEmail] = useState('')
   const [emailError, setEmailError] = useState('')
   const heroLottieRef = useRef(null)
   const heroLottieSpeed = 0.8
-  const orbitIcons = [
-    '/landing/crypto/Doge.svg',
-    '/landing/crypto/Doge-1.svg',
-    '/landing/crypto/Trx.svg',
+  const primaryOrbitIcons = [
+    '/landing/crypto/btc.svg',
     '/landing/crypto/Group%201000002658.svg',
+    '/landing/crypto/Trx.svg',
+    '/landing/crypto/usdt.svg',
+  ]
+  const secondaryOrbitIcons = [
+    '/landing/crypto/bnb.svg',
+    '/landing/crypto/ADA.svg',
+    '/landing/crypto/Usdc.svg',
+    '/landing/crypto/xrp.svg',
+    '/landing/crypto/Doge%20copy.svg',
+    '/landing/crypto/XML.svg',
+  ]
+  const humanHeroOrbitCards = [
+    {
+      src: '/landing/image-hero-2/curencie.svg',
+      alt: 'Currencies card',
+      angle: '0deg',
+      radius: 'clamp(120px, 15vw, 190px)',
+      sizeClass: 'w-[50%] max-w-[245px]',
+    },
+    {
+      src: '/landing/image-hero-2/customer.svg',
+      alt: 'Customer review card',
+      angle: '90deg',
+      radius: 'clamp(120px, 15vw, 190px)',
+      sizeClass: 'w-[50%] max-w-[245px]',
+    },
+    {
+      src: '/landing/image-hero-2/curencie.svg',
+      alt: 'Currencies card',
+      angle: '180deg',
+      radius: 'clamp(120px, 15vw, 190px)',
+      sizeClass: 'w-[50%] max-w-[245px]',
+    },
+    {
+      src: '/landing/image-hero-2/customer.svg',
+      alt: 'Customer review card',
+      angle: '270deg',
+      radius: 'clamp(120px, 15vw, 190px)',
+      sizeClass: 'w-[50%] max-w-[245px]',
+    },
   ]
 
   useEffect(() => {
@@ -47,6 +86,16 @@ export default function HeroSection() {
       heroLottieRef.current.setSpeed(heroLottieSpeed)
     }
   }, [heroAnimationData, heroLottieSpeed])
+
+  useEffect(() => {
+    if (!heroAnimationData) return
+
+    const timeoutId = setTimeout(() => {
+      setIsBitcoinVisualVisible((previous) => !previous)
+    }, isBitcoinVisualVisible ? 6500 : 3500)
+
+    return () => clearTimeout(timeoutId)
+  }, [heroAnimationData, isBitcoinVisualVisible])
 
   const handleEmailSubmit = (event) => {
     event.preventDefault()
@@ -124,51 +173,129 @@ export default function HeroSection() {
           <div className="pointer-events-none absolute right-3 bottom-8 h-36 w-36 rounded-full bg-[#008080]/15 blur-3xl lg:h-48 lg:w-48" />
 
           {heroAnimationData ? (
-            <div
-              role="img"
-              aria-label={t.hero.imageAlt}
-              className="relative z-10 mx-auto aspect-square w-full max-w-[560px] lg:mx-0 lg:max-w-[540px]"
-            >
-              <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-                <div className="h-[72%] w-[72%] rounded-full border border-white/20" />
-                <div className="absolute h-[88%] w-[88%] rounded-full border border-[#008080]/20" />
-              </div>
-
-              <div className="hero-orbit-system pointer-events-none absolute inset-0">
-                {orbitIcons.map((icon, index) => (
-                  <div
-                    key={icon}
-                    className="hero-orbit-node"
-                    style={{
-                      '--orbit-angle': `${index * (360 / orbitIcons.length)}deg`,
-                      '--orbit-radius': 'clamp(116px, 14.5vw, 175px)',
-                    }}
-                  >
-                    <span className="hero-orbit-badge shadow-md">
-                      <img src={icon} alt="Crypto token" className="h-7 w-7 sm:h-8 sm:w-8" />
-                    </span>
+            <div className="relative z-10 mx-auto aspect-square w-full max-w-[560px] lg:mx-0 lg:max-w-[540px]" role="img" aria-label={t.hero.imageAlt}>
+              <div
+                className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${isBitcoinVisualVisible ? 'opacity-0' : 'opacity-100'}`}
+              >
+                <div className="hero-human-visual relative h-full w-full">
+                  <div className="pointer-events-none absolute left-[66%] top-[27%] z-0 -translate-x-1/2 -translate-y-1/2">
+                    <div className="h-[300px] w-[300px] rounded-full border border-white/28" />
+                    <div className="absolute left-1/2 top-1/2 h-[210px] w-[210px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/22" />
+                    <div className="absolute left-1/2 top-1/2 h-[120px] w-[120px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/16" />
                   </div>
-                ))}
+
+                  <div className="hero-human-orbit absolute inset-0 z-10">
+                    {humanHeroOrbitCards.map((card) => (
+                      <div
+                        key={card.src}
+                        className="hero-human-orbit-node"
+                        style={{ '--hero-card-angle': card.angle, '--hero-card-radius': card.radius }}
+                      >
+                        <img
+                          src={card.src}
+                          alt={card.alt}
+                          className={`hero-human-orbit-card ${card.sizeClass}`}
+                        />
+                      </div>
+                    ))}
+                  </div>
+
+                  <img
+                    src="/landing/image-hero-2/imag-bonne-dame.svg"
+                    alt={t.hero.imageAlt}
+                    className="relative z-20 ml-auto h-full w-auto max-w-[68%] object-contain"
+                  />
+                </div>
               </div>
 
-              <div className="hero-center-float absolute inset-0 flex items-center justify-center">
-                <div className="pointer-events-none absolute h-[40%] w-[40%] rounded-full bg-[#008080]/18 blur-3xl" />
-                <div className="relative z-10 w-[56%] max-w-[290px]">
-                  <Lottie
-                    lottieRef={heroLottieRef}
-                    animationData={heroAnimationData}
-                    loop
-                    autoplay
-                  />
+              <div
+                className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${isBitcoinVisualVisible ? 'opacity-100' : 'opacity-0'}`}
+              >
+                <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+                  <div className="h-[64%] w-[64%] rounded-full border border-white/24" />
+                  <div className="absolute h-[78%] w-[78%] rounded-full border border-[#2ed7d7]/18" />
+                  <div className="absolute h-[92%] w-[92%] rounded-full border border-dashed border-[#8cc6ff]/18" />
+                </div>
+
+                <div className="hero-orbit-system pointer-events-none absolute inset-0">
+                  {primaryOrbitIcons.map((icon, index) => (
+                    <div
+                      key={`primary-${icon}`}
+                      className="hero-orbit-node"
+                      style={{
+                        '--orbit-angle': `${index * (360 / primaryOrbitIcons.length)}deg`,
+                        '--orbit-radius': 'clamp(116px, 14.5vw, 175px)',
+                      }}
+                    >
+                      <span className="hero-orbit-badge shadow-md">
+                        <img src={icon} alt="Crypto token" className="h-7 w-7 sm:h-8 sm:w-8" />
+                      </span>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="hero-orbit-system hero-orbit-system-secondary pointer-events-none absolute inset-0">
+                  {secondaryOrbitIcons.map((icon, index) => (
+                    <div
+                      key={`secondary-${icon}`}
+                      className="hero-orbit-node"
+                      style={{
+                        '--orbit-angle': `${index * (360 / secondaryOrbitIcons.length)}deg`,
+                        '--orbit-radius': 'clamp(148px, 19vw, 228px)',
+                      }}
+                    >
+                      <span className="hero-orbit-badge hero-orbit-badge-secondary shadow-md">
+                        <img src={icon} alt="Crypto token" className="h-6 w-6 sm:h-7 sm:w-7" />
+                      </span>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="hero-center-float absolute inset-0 flex items-center justify-center">
+                  <div className="pointer-events-none absolute h-[40%] w-[40%] rounded-full bg-[#008080]/18 blur-3xl" />
+                  <div className="relative z-10 w-[56%] max-w-[290px]">
+                    <Lottie
+                      lottieRef={heroLottieRef}
+                      animationData={heroAnimationData}
+                      loop
+                      autoplay
+                    />
+                  </div>
                 </div>
               </div>
             </div>
           ) : (
-            <img
-              src="/landing/image-header.png"
-              alt={t.hero.imageAlt}
-              className="animate-float relative z-10 w-full max-w-[560px] lg:max-w-none lg:w-full xl:w-full"
-            />
+            <div className="relative z-10 mx-auto aspect-square w-full max-w-[560px] lg:mx-0 lg:max-w-[540px]" role="img" aria-label={t.hero.imageAlt}>
+              <div className="hero-human-visual relative h-full w-full">
+                <div className="pointer-events-none absolute left-[66%] top-[27%] z-0 -translate-x-1/2 -translate-y-1/2">
+                  <div className="h-[300px] w-[300px] rounded-full border border-white/28" />
+                  <div className="absolute left-1/2 top-1/2 h-[210px] w-[210px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/22" />
+                  <div className="absolute left-1/2 top-1/2 h-[120px] w-[120px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/16" />
+                </div>
+
+                <div className="hero-human-orbit absolute inset-0 z-10">
+                  {humanHeroOrbitCards.map((card) => (
+                    <div
+                      key={`fallback-${card.src}`}
+                      className="hero-human-orbit-node"
+                      style={{ '--hero-card-angle': card.angle, '--hero-card-radius': card.radius }}
+                    >
+                      <img
+                        src={card.src}
+                        alt={card.alt}
+                        className={`hero-human-orbit-card ${card.sizeClass}`}
+                      />
+                    </div>
+                  ))}
+                </div>
+
+                <img
+                  src="/landing/image-hero-2/imag-bonne-dame.svg"
+                  alt={t.hero.imageAlt}
+                  className="relative z-20 ml-auto h-full w-auto max-w-[68%] object-contain"
+                />
+              </div>
+            </div>
           )}
 
 
