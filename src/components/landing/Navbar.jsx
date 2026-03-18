@@ -9,7 +9,7 @@ export default function Navbar() {
   const [pathname, setPathname] = useState(window.location.pathname)
   const { language, setLanguage, t } = useI18n()
   const languageFlag = language === 'FR' ? '/landing/fr-contry-flag.png' : '/landing/country-flag.png'
-  const isProductsPage = pathname === '/products'
+  const isProductsPage = pathname === '/products' || pathname === '/supported-coins'
   const useLandingHeroStyle = isAtTop && !isProductsPage
   const logoSrc = useLandingHeroStyle ? '/landing/logos%20/logo-izichangePay.svg' : '/landing/logos%20/logo-izichangePay-green.svg'
 
