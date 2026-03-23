@@ -5,6 +5,14 @@
   "outputDirectory": "prod_dist",
   "rewrites": [
     {
+      "source": "/assets/(.*)",
+      "destination": "/assets/$1"
+    },
+    {
+      "source": "/landing/(.*)",
+      "destination": "/landing/index.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
