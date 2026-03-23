@@ -1,6 +1,7 @@
 import { useI18n } from '../../i18n/useI18n'
+import { base } from '../../../helpers'
 
-const HERO_IMAGE = '/productsPage/image-hero-product.png'
+const HERO_IMAGE = base('/assets/images/productsPage/image-hero-product.png')
 
 export default function ProductsHeroSection() {
   const { t } = useI18n()

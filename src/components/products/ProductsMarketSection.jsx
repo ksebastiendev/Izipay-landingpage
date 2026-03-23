@@ -1,5 +1,6 @@
 import { useI18n } from '../../i18n/useI18n'
 import { cryptoAssets } from './data'
+import { base } from '../../../helpers'
 
 export default function ProductsMarketSection() {
   const { t } = useI18n()
@@ -40,7 +41,7 @@ export default function ProductsMarketSection() {
                   {/* Icon */}
                   <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/10">
                     {asset.icon ? (
-                      <img src={asset.icon} alt={asset.name} className="h-5 w-5 object-contain" />
+                      <img src={base(asset.icon)} alt={asset.name} className="h-5 w-5 object-contain" />
                     ) : (
                       <span className="text-[12px] font-bold text-amber-400">B</span>
                     )}

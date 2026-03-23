@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react'
 import Navbar from '../landing/Navbar'
 import { useI18n } from '../../i18n/useI18n'
 import { supportedCoins } from './data'
+import { base } from '../../../helpers'
 import ProductsFooterSection from './ProductsFooterSection'
 
 const FILTERS = ['popular', 'all', 'stable', 'tokens']
@@ -126,7 +127,7 @@ export default function SupportedCoinsPage() {
                   >
                     <div className="flex min-w-0 items-center gap-3">
                       <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#f3f7ff]">
-                        <img src={coin.icon} alt={coin.name} className="h-6 w-6 object-contain" />
+                        <img src={base(coin.icon)} alt={coin.name} className="h-6 w-6 object-contain" />
                       </span>
                       <span className="truncate text-[15px] font-semibold text-slate-900 sm:text-[16px]">{coin.name}</span>
                     </div>

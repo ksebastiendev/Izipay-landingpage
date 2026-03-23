@@ -9,9 +9,9 @@ const getInitials = (fullName) =>
     .join('')
 
 const testimonialAvatars = {
-  'Sophie B': '/landing/avatar-sophieB.jpeg',
-  'Emma R': '/landing/avatarEmma.jpeg',
-  'Maxime L': '/landing/avatarMaxiemM.jpeg',
+  'Sophie B': '/assets/images/landing/avatar-sophieB.jpeg',
+  'Emma R': '/assets/images/landing/avatarEmma.jpeg',
+  'Maxime L': '/assets/images/landing/avatarMaxiemM.jpeg',
 }
 
 export default function TestimonialsSection() {

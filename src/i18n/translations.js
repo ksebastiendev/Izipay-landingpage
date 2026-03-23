@@ -101,9 +101,9 @@ export const translations = {
     },
     faqNewsletter: {
       title: 'Besoin d’aide pour accepter les paiements crypto ?',
-      description: 'Inscrivez-vous à notre newsletter et recevez nos nouveautés, mises à jour produit et conseils sur les paiements crypto.',
+      description: 'Nos équipes sont disponibles pour vous accompagner à chaque étape, de l’intégration à l’optimisation de vos paiements crypto.',
       emailPlaceholder: 'Adresse email',
-      cta: 'On se connecte',
+      cta: 'Contactez-Nous',
       moreFaq: 'Plus de FAQ',
       lessFaq: 'Moins de FAQ',
       faqs: [
@@ -313,9 +313,9 @@ export const translations = {
     },
     faqNewsletter: {
       title: 'Need Help Accepting Crypto Payments?',
-      description: 'Subscribe to our newsletter and receive product updates, new features, and practical tips on crypto payments.',
+      description: 'Our team is available to support you at every step, from integration to optimizing your crypto payment flows.',
       emailPlaceholder: 'Email Address',
-      cta: "Let's Connect",
+      cta: "Contact Us",
       moreFaq: 'More FAQ',
       lessFaq: 'Less FAQ',
       faqs: [
