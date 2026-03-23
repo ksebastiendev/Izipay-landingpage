@@ -5,12 +5,20 @@
   "outputDirectory": "prod_dist",
   "rewrites": [
     {
-      "source": "/assets/(.*)",
+      "source": "/landing/assets/(.*)",
       "destination": "/assets/$1"
     },
     {
+      "source": "/landing",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/landing/",
+      "destination": "/index.html"
+    },
+    {
       "source": "/landing/(.*)",
-      "destination": "/landing/index.html"
+      "destination": "/index.html"
     },
     {
       "source": "/(.*)",
