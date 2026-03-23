@@ -63,26 +63,12 @@ export default function FaqNewsletterSection() {
           <p className="mt-2 max-w-[460px] text-[16px] text-[#23253D]/65 lg:text-[18px]">
             {t.faqNewsletter.description}
           </p>
-          <form onSubmit={handleNewsletterSubmit} className="mt-7 max-w-[420px]">
-            <div className="flex items-center gap-3">
-              <input
-                type="email"
-                value={email}
-                onChange={(event) => {
-                  setEmail(event.target.value)
-                  if (emailError) {
-                    setEmailError('')
-                  }
-                }}
-                placeholder={t.faqNewsletter.emailPlaceholder}
-                className="h-10 flex-1 rounded-xl border border-[#3257A8]/20 bg-white px-4 text-[12px] text-[#23253D] outline-none placeholder:text-[#23253D]/40"
-              />
-              <button type="submit" className="h-10 rounded-xl bg-[#008080] px-6 text-[14px] font-semibold text-white transition hover:bg-[#007373]">
+          <div className="flex items-center mt-7 max-w-[420px]">
+              
+              <a href='https://cal.com/izichange/izichangepay' type="submit" className="py-3 rounded-xl bg-[#008080] px-6 text-[14px] font-semibold text-white transition hover:bg-[#007373]">
                 {t.faqNewsletter.cta}
-              </button>
+              </a>
             </div>
-            {emailError ? <p className="mt-2 text-[12px] text-[#b8303c]">{emailError}</p> : null}
-          </form>
         </div>
 
         <div className="divide-y divide-[#23253D]/12 border-t border-[#23253D]/12 pt-1">

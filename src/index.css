@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "Typold";
-  src: url("./assets/font/Typold-Regular 1.otf") format("opentype");
+  src: url("/assets/font/Typold-Regular.otf") format("opentype");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -10,7 +10,7 @@
 
 @font-face {
   font-family: "Typold";
-  src: url("./assets/font/Typold-Bold 1.otf") format("opentype");
+  src: url("/assets/font/Typold-Bold.otf") format("opentype");
   font-style: normal;
   font-weight: 700;
   font-display: swap;
@@ -32,7 +32,6 @@ body {
   transform: translateY(26px);
   transition: opacity 650ms ease, transform 650ms cubic-bezier(0.22, 1, 0.36, 1);
   transition-delay: var(--reveal-delay, 0ms);
-  will-change: opacity, transform;
 }
 
 [data-reveal].is-visible {
@@ -159,7 +158,6 @@ body {
   display: flex;
   width: max-content;
   animation: trust-marquee-scroll 14s linear infinite;
-  will-change: transform;
 }
 
 .trust-marquee-item {

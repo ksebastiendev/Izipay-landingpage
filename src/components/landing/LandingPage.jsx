@@ -1,9 +1,7 @@
 import { useEffect } from 'react'
 import Navbar from './Navbar'
 import HeroSection from './HeroSection'
-// import TrustBanner from './TrustBanner'
 import WhyChooseSection from './WhyChooseSection'
-import ReceiveAnywhereSection from './ReceiveAnywhereSection'
 import SimpleWaySection from './SimpleWaySection'
 import BusinessTypesSection from './BusinessTypesSection'
 import DashboardSection from './DashboardSection'
@@ -36,7 +34,7 @@ export default function LandingPage() {
 
   return (
     <main className="bg-white text-slate-900">
-      <Navbar />
+      <Navbar isProductsPage={false} />
       <div data-reveal>
         <HeroSection />
         {/* <TrustBanner /> */}

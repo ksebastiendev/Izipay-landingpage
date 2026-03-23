@@ -1,5 +1,7 @@
 import { useI18n } from '../../i18n/useI18n'
 import { productBlockImages } from './data'
+import { base } from '../../../helpers'
+import { Link } from 'react-router-dom'
 
 const DOCS_URL = 'https://cryptogateway-project.github.io/cryptogateway-project/'
 
@@ -21,8 +23,13 @@ export default function ProductsSolutionsSection() {
         <div className="grid gap-6 md:grid-cols-2 xl:gap-8">
           {t.products.blocks.map((block, index) => {
             const blockImage = productBlockImages[index]
-            const ctaHref = index === 1 ? DOCS_URL : '/login'
             const isDocsLink = index === 1
+            const flowRouteByIndex = {
+              0: '/payments/checkout',
+              2: '/payments/pos',
+              3: '/payments/product',
+            }
+            const ctaHref = isDocsLink ? DOCS_URL : (flowRouteByIndex[index] || '/products')
 
             return (
               <article
@@ -30,7 +37,7 @@ export default function ProductsSolutionsSection() {
                 className="flex h-full min-h-[520px] flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white"
               >
                 <img
-                  src={blockImage}
+                  src={base(blockImage)}
                   alt={block.imageAlt}
                   className="h-[240px] w-full object-cover"
                 />
@@ -42,7 +49,7 @@ export default function ProductsSolutionsSection() {
                     <ul className="mt-4 list-none space-y-2 pl-0 text-[16px] leading-[1.6] text-slate-600">
                       <li className="flex items-start gap-2">
                         <img
-                          src="/landing/icone%20/valid.svg"
+                          src={base('/assets/images/landing/icone%20/valid.svg')}
                           alt=""
                           aria-hidden="true"
                           className="mt-1 h-5 w-5 shrink-0"
@@ -52,7 +59,7 @@ export default function ProductsSolutionsSection() {
                       {block.points.map((point) => (
                         <li key={point} className="flex items-start gap-2">
                           <img
-                            src="/landing/icone%20/valid.svg"
+                            src={base('/assets/images/landing/icone%20/valid.svg')}
                             alt=""
                             aria-hidden="true"
                             className="mt-1 h-5 w-5 shrink-0"
@@ -65,14 +72,23 @@ export default function ProductsSolutionsSection() {
                     <p className="mt-4 text-[16px] leading-[1.6] text-slate-600">{block.description}</p>
                   )}
 
-                  <a
-                    href={ctaHref}
-                    target={isDocsLink ? '_blank' : undefined}
-                    rel={isDocsLink ? 'noreferrer' : undefined}
-                    className="mt-6 inline-flex h-10 items-center self-start rounded-xl bg-[#008080] px-5 text-[14px] font-semibold text-white transition hover:bg-[#007373]"
-                  >
-                    {block.cta}
-                  </a>
+                  {isDocsLink ? (
+                    <a
+                      href={ctaHref}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="mt-6 inline-flex h-10 items-center self-start rounded-xl bg-[#008080] px-5 text-[14px] font-semibold text-white transition hover:bg-[#007373]"
+                    >
+                      {block.cta}
+                    </a>
+                  ) : (
+                    <Link
+                      to={ctaHref}
+                      className="mt-6 inline-flex h-10 items-center self-start rounded-xl bg-[#008080] px-5 text-[14px] font-semibold text-white transition hover:bg-[#007373]"
+                    >
+                      {block.cta}
+                    </Link>
+                  )}
                 </div>
               </article>
             )

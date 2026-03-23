@@ -1,7 +1,8 @@
 import { useRef } from 'react'
 import { useI18n } from '../../i18n/useI18n'
+import { base } from '../../../helpers'
 
-const cardIcons = ['/landing/card-step1.png', '/landing/cardstep2.svg.png', '/landing/cardstep3.svg.png', '/landing/card-step1.png']
+const cardIcons = [base('/assets/images/landing/card-step1.png'), base('/assets/images/landing/cardstep2.svg.png'), base('/assets/images/landing/cardstep3.svg.png'), base('/assets/images/landing/card-step1.png')]
 
 const iconBadgeStyles = [
   'border-[#006666] bg-[#008080] shadow-[0_10px_24px_-14px_rgba(0,128,128,0.5)] group-hover:shadow-[0_16px_28px_-16px_rgba(0,128,128,0.6)]',
@@ -35,10 +36,10 @@ export default function WhyChooseSection() {
           <h2 className="text-[40px] font-extrabold tracking-[-0.02em] text-[#23253D] lg:text-[44px]">{t.whyChoose.title}</h2>
           <div className="flex items-center gap-2">
             <button type="button" aria-label={t.whyChoose.previous} className="shrink-0" onClick={() => scrollCards(-1)}>
-              <img src="/landing/Button.svg" alt={t.whyChoose.previous} className="h-11 w-11" />
+              <img src={base('/assets/images/landing/Button.svg')} alt={t.whyChoose.previous} className="h-11 w-11" />
             </button>
             <button type="button" aria-label={t.whyChoose.next} className="shrink-0" onClick={() => scrollCards(1)}>
-              <img src="/landing/Button-1.svg" alt={t.whyChoose.next} className="h-11 w-11" />
+              <img src={base('/assets/images/landing/Button-1.svg')} alt={t.whyChoose.next} className="h-11 w-11" />
             </button>
           </div>
         </div>

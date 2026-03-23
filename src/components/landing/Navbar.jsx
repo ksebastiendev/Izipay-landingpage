@@ -1,17 +1,17 @@
 import { useEffect, useState } from 'react'
 import { useI18n } from '../../i18n/useI18n'
+import { base } from '../../../helpers'
+import { useLocation } from 'react-router'
 
 const DOCS_URL = 'https://cryptogateway-project.github.io/cryptogateway-project/'
 
-export default function Navbar() {
+export default function Navbar({isProductsPage=true}) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isAtTop, setIsAtTop] = useState(true)
-  const [pathname, setPathname] = useState(window.location.pathname)
   const { language, setLanguage, t } = useI18n()
-  const languageFlag = language === 'FR' ? '/landing/fr-contry-flag.png' : '/landing/country-flag.png'
-  const isProductsPage = pathname === '/products' || pathname === '/supported-coins'
+  const languageFlag = language === 'FR' ? base('/assets/images/landing/fr-contry-flag.png') : base('/assets/images/landing/country-flag.png')
   const useLandingHeroStyle = isAtTop && !isProductsPage
-  const logoSrc = useLandingHeroStyle ? '/landing/logos%20/logo-izichangePay.svg' : '/landing/logos%20/logo-izichangePay-green.svg'
+  const logoSrc = useLandingHeroStyle ? base('/assets/images/landing/logos%20/logo-izichangePay.svg') : base('/assets/images/landing/logos%20/logo-izichangePay-green.svg')
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,17 +24,7 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  useEffect(() => {
-    const handleLocationChange = () => setPathname(window.location.pathname)
-
-    window.addEventListener('popstate', handleLocationChange)
-    window.addEventListener('locationchange', handleLocationChange)
-
-    return () => {
-      window.removeEventListener('popstate', handleLocationChange)
-      window.removeEventListener('locationchange', handleLocationChange)
-    }
-  }, [])
+  
 
   return (
     <header
@@ -47,7 +37,7 @@ export default function Navbar() {
       }`}
     >
       <div className="mx-auto flex min-h-[58px] w-full items-center justify-between gap-2 px-[0.8rem] py-2 sm:h-[64px] sm:px-[0.9rem] sm:py-0 md:px-[1.2rem] max-w-[600px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1180px] 2xl:max-w-[1400px]">
-        <a href="/" className="shrink-0">
+        <a href="/acceuil" className="shrink-0">
           <img src={logoSrc} alt="IzichangePay" className="h-[28px] w-auto max-w-[132px] object-contain sm:h-[34px] sm:max-w-none" />
         </a>
 
@@ -67,7 +57,7 @@ export default function Navbar() {
             {t.nav.docs}
           </a>
           <a
-            href="#faq"
+            href="/acceuil#faq"
             className={`text-[15px] font-semibold leading-none transition ${useLandingHeroStyle ? 'text-white/85 hover:text-white' : 'text-slate-500 hover:text-[#008080]'}`}
           >
             {t.nav.faq}

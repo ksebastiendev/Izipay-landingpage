@@ -1,4 +1,5 @@
 import { useI18n } from '../../i18n/useI18n'
+import { base } from '../../../helpers'
 
 export default function ReceiveAnywhereSection() {
   const { t } = useI18n()
@@ -8,7 +9,7 @@ export default function ReceiveAnywhereSection() {
       <div className="mx-auto w-full px-[0.8rem] sm:px-[0.9rem] md:px-[1.2rem] max-w-[600px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1180px] 2xl:max-w-[1400px]">
         <div className="relative overflow-hidden rounded-[2rem] border border-[#3257A8]/10 bg-white">
           <img
-            src="/landing/section-cryptopayement.png"
+            src={base('/assets/images/landing/section-cryptopayement.png')}
             alt={t.receiveAnywhere.imageAlt}
             className="min-h-[280px] w-full object-cover object-[72%_center] sm:min-h-[220px] sm:object-cover sm:object-center"
           />
