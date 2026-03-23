@@ -12,7 +12,7 @@ export const pricingPlansMeta = [
   },
   {
     icon: '/assets/images/productsPage/plan2.png',
-    value: '0.8 USD',
+    value: '0.8%',
   },
   {
     icon: '/assets/images/productsPage/plan3.png',
