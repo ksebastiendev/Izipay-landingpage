@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, Trash2, Search, X } from "lucide-react";
+import { ChevronDown, Trash2, Search, X, Clock } from "lucide-react";
 import { StepIndicator } from "../shared";
 import { base } from "../../../../helpers";
 
@@ -25,6 +25,8 @@ interface PosCurrencyProps {
   onTogglePicker: () => void;
   onValidate: () => void;
   formatDisplay: (amount: string, currency: string) => { usd: string; crypto: string };
+  remaining: number;
+  formatTime: (s: number) => string;
 }
 
 export const PosCurrency = ({
@@ -42,6 +44,8 @@ export const PosCurrency = ({
   onTogglePicker,
   onValidate,
   formatDisplay,
+  remaining,
+  formatTime,
 }: PosCurrencyProps) => {
   const display = formatDisplay(amount, selectedCrypto);
   const selectedCurrencyIcon = currencies.find((c) => c.code === selectedCrypto)?.icon || "⟨⟩";
@@ -56,7 +60,18 @@ export const PosCurrency = ({
       className="relative"
     >
       <StepIndicator currentStep={0} totalSteps={4} />
-      <div className="px-8 py-8">
+      <div className="px-8 pt-6 pb-8">
+        <div className="flex items-start justify-end mb-5">
+          <div className="flex flex-col items-start text-left gap-1">
+            <span className="text-[11px] font-bold uppercase tracking-widest text-slate-500">
+              Expiration
+            </span>
+            <span className="flex items-center gap-2 text-xl font-medium text-[#DC3F4D] leading-none">
+              <Clock size={14} />
+              {formatTime(remaining)}
+            </span>
+          </div>
+        </div>
         <div className="mb-6">
           <label className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-3 block">
             Sélectionner une devise

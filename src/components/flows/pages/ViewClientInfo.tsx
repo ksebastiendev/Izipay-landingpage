@@ -5,6 +5,8 @@ import { AmountHero, StepIndicator } from "../shared";
 interface ViewClientInfoProps {
   amount: string;
   currency: string;
+  remaining: number;
+  formatTime: (s: number) => string;
   firstName: string;
   lastName: string;
   email: string;
@@ -18,6 +20,8 @@ interface ViewClientInfoProps {
 export const ViewClientInfo = ({
   amount,
   currency,
+  remaining,
+  formatTime,
   firstName,
   lastName,
   email,
@@ -41,7 +45,12 @@ export const ViewClientInfo = ({
       exit={{ opacity: 0, x: -20 }}
       transition={{ duration: 0.3 }}
     >
-      <AmountHero amount={amount} currency={currency} />
+      <AmountHero
+        amount={amount}
+        currency={currency}
+        remaining={remaining}
+        formatTime={formatTime}
+      />
       <div className="px-8 pt-6 pb-8">
         <StepIndicator currentStep={2} />
         <div className="flex gap-3.5 mb-4">

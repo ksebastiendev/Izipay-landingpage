@@ -5,7 +5,6 @@ import { initialTransactions } from "@/data/transactions";
 
 // Shared components
 import {
-  StepIndicator,
   CheckoutHeader,
   CheckoutFooter,
   NotificationBanner,
@@ -169,6 +168,8 @@ const ProductFlow = ({
           <ViewSelection
             amount={productPrice}
             currency="USDT"
+            remaining={remaining}
+            formatTime={formatTime}
             onContinue={() => setCurrentView("client-info")}
           />
         )}
@@ -177,6 +178,8 @@ const ProductFlow = ({
           <ViewClientInfo
             amount={productPrice}
             currency="USDT"
+            remaining={remaining}
+            formatTime={formatTime}
             firstName={firstName}
             lastName={lastName}
             email={email}
@@ -193,7 +196,6 @@ const ProductFlow = ({
             amount={productPrice}
             currency="USDT"
             remaining={remaining}
-            total={total}
             formatTimeShort={formatTimeShort}
             copiedField={copiedField}
             onCopy={handleCopy}
@@ -217,9 +219,6 @@ const ProductFlow = ({
       {/* Footer */}
       {currentView !== "success" && currentView !== "product" && (
         <CheckoutFooter
-          remaining={remaining}
-          total={total}
-          formatTime={formatTime}
           onSimulate={simulateIncomingTx}
         />
       )}

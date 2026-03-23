@@ -36,7 +36,7 @@ export const NotificationBanner = ({
             <div className="text-[17px] font-extrabold text-white tracking-tight truncate">
               +{transaction.amount} {transaction.currency} reçu
             </div>
-            <div className="text-xs font-medium text-white/65 font-mono truncate mt-0.5">
+            <div className="text-xs font-medium text-white/65 font-['Typold'] truncate mt-0.5">
               {transaction.hashShort} · À l'instant
             </div>
           </div>

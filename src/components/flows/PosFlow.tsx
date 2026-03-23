@@ -5,7 +5,6 @@ import { initialTransactions } from "@/data/transactions";
 
 // Shared components
 import {
-  StepIndicator,
   CheckoutHeader,
   CheckoutFooter,
   NotificationBanner,
@@ -240,6 +239,8 @@ const PosFlow = ({
             onTogglePicker={() => setShowCurrencyPicker(!showCurrencyPicker)}
             onValidate={handleValidate}
             formatDisplay={formatDisplay}
+            remaining={remaining}
+            formatTime={formatTime}
           />
         )}
 
@@ -247,6 +248,8 @@ const PosFlow = ({
           <ViewClientInfo
             amount={amountDisplay}
             currency={selectedCrypto}
+            remaining={remaining}
+            formatTime={formatTime}
             firstName={firstName}
             lastName={lastName}
             email={email}
@@ -263,7 +266,6 @@ const PosFlow = ({
             amount={amountDisplay}
             currency={selectedCrypto}
             remaining={remaining}
-            total={total}
             formatTimeShort={formatTimeShort}
             copiedField={copiedField}
             onCopy={handleCopy}
@@ -287,9 +289,6 @@ const PosFlow = ({
       {/* Footer */}
       {currentView !== "success" && currentView !== "entry" && (
         <CheckoutFooter
-          remaining={remaining}
-          total={total}
-          formatTime={formatTime}
           onSimulate={simulateIncomingTx}
         />
       )}

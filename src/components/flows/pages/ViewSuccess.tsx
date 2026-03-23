@@ -86,7 +86,7 @@ export const ViewSuccess = ({
           <span className="text-slate-600">{row.key}</span>
           <span
             className={`font-semibold text-slate-800 text-right ${
-              row.mono ? "font-mono text-[13px] text-[#008080]" : ""
+              row.mono ? "font-['Typold'] text-[13px] text-[#008080]" : ""
             }`}
           >
             {row.val}

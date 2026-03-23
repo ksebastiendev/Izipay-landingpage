@@ -7,6 +7,8 @@ import { base } from "../../../../helpers";
 interface ViewSelectionProps {
   amount: string;
   currency: string;
+  remaining: number;
+  formatTime: (s: number) => string;
   onContinue: () => void;
 }
 
@@ -19,6 +21,8 @@ const CRYPTO_OPTIONS = [
 export const ViewSelection = ({
   amount,
   currency,
+  remaining,
+  formatTime,
   onContinue,
 }: ViewSelectionProps) => {
   const [selectedCrypto, setSelectedCrypto] = useState(currency || "USDT");
@@ -45,7 +49,12 @@ export const ViewSelection = ({
       transition={{ duration: 0.3 }}
       className="relative"
     >
-      <AmountHero amount={amount} currency={currency} />
+      <AmountHero
+        amount={amount}
+        currency={currency}
+        remaining={remaining}
+        formatTime={formatTime}
+      />
       <div className="px-8 pt-6 pb-8">
         <StepIndicator currentStep={1} />
         <label className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-2 block">

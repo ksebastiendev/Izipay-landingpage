@@ -116,7 +116,7 @@ export const TransactionPanel = ({
                           <div className="text-[11px] font-bold uppercase tracking-widest text-slate-500 mb-1">
                             {item.label}
                           </div>
-                          <div className="font-mono text-[13px] text-[#008080] truncate">
+                          <div className="font-['Typold'] text-[13px] text-[#008080] truncate">
                             {item.value}
                           </div>
                         </div>
@@ -186,7 +186,7 @@ export const TransactionPanel = ({
                     )}
                   </div>
                   <div className="flex-1 min-w-0">
-                    <div className="font-mono text-[13px] text-[#008080] truncate">
+                    <div className="font-['Typold'] text-[13px] text-[#008080] truncate">
                       {tx.hashShort}
                     </div>
                     <div className="flex items-center gap-2 mt-1">
