@@ -9,6 +9,14 @@
       "destination": "/assets/$1"
     },
     {
+      "source": "/landing/vite.svg",
+      "destination": "/vite.svg"
+    },
+    {
+      "source": "/landing/vitej.svg",
+      "destination": "/vitej.svg"
+    },
+    {
       "source": "/landing",
       "destination": "/index.html"
     },
